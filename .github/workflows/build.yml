@@ -26,7 +26,7 @@ jobs:
         run: npm run build-linux
 
       - name: Upload Linux Release Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
             name: linux-release
             path: release/*.zip
@@ -49,3 +49,9 @@ jobs:
 
       - name: Run build:release-win32-all task
         run: npm run build:release-win32-all
+
+      - name: Upload Windows Release Artifact
+        uses: actions/upload-artifact@v4
+        with:
+            name: windows-release
+            path: release/win-unpacked
