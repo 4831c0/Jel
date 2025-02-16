@@ -1,0 +1,51 @@
+name: Electron Build Workflow
+
+on:
+  push:
+    branches:
+      - '**'  # Trigger on push to any branch
+
+jobs:
+  build-linux:
+    name: Build Linux Artifacts
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run build-linux task
+        run: npm run build-linux
+
+      - name: Upload Linux Release Artifact
+        uses: actions/upload-artifact@v3
+        with:
+            name: linux-release
+            path: release/*.zip
+
+  build-win32:
+    name: Build Windows Artifacts
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run build:release-win32-all task
+        run: npm run build:release-win32-all
