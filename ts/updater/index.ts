@@ -71,7 +71,5 @@ export function onRestartCancelled(): void {
 }
 
 function autoUpdateDisabled() {
-  return (
-    process.platform === 'linux' || process.mas || !config.get('updatesEnabled')
-  );
+  return true;
 }
