@@ -410,39 +410,18 @@
     },
     "win": {
       "artifactName": "${name}-win-${arch}-${version}.${ext}",
-      "certificateSubjectName": "Signal Messenger, LLC",
-      "certificateSha1": "8D5E3CD800736C5E1FE459A1F5AA48287D4F6EC6",
-      "signingHashAlgorithms": [
-        "sha256"
-      ],
-      "sign": "./ts/scripts/sign-windows.js",
-      "publisherName": "Signal Messenger, LLC",
       "icon": "build/icons/win/icon.ico",
-      "publish": [
-        {
-          "provider": "generic",
-          "url": "https://updates.signal.org/desktop"
-        }
-      ],
       "releaseInfo": {
         "vendor": {
           "minOSVersion": "10.0.10240"
         }
       },
-      "signDlls": true,
-      "signExts": [
-        ".node"
-      ],
       "target": [
-        "nsis"
+        "zip"
       ],
       "asarUnpack": [
         "build/icons/win/icon.ico"
       ]
-    },
-    "nsis": {
-      "deleteAppDataOnUninstall": true,
-      "differentialPackage": true
     },
     "linux": {
       "category": "Network;InstantMessaging;Chat",
