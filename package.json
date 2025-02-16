@@ -362,9 +362,6 @@
       }
     }
   },
-  "engines": {
-    "node": "20.18.1"
-  },
   "build": {
     "appId": "org.whispersystems.signal-desktop",
     "mac": {
