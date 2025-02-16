@@ -3,7 +3,8 @@
 
 import React from 'react';
 import type { ReactElement } from 'react';
-import classNames from 'classnames';
+import Markdown from 'react-markdown'
+import rehypeHighlight from 'rehype-highlight'
 import emojiRegex from 'emoji-regex';
 import { sortBy } from 'lodash';
 
@@ -26,6 +27,7 @@ import { Emojify } from './Emojify';
 import { AddNewLines } from './AddNewLines';
 import type { SizeClassType } from '../emoji/lib';
 import type { LocalizerType } from '../../types/Util';
+import { hr } from 'intl-tel-input/i18n';
 
 const EMOJI_REGEXP = emojiRegex();
 export enum RenderLocation {
@@ -151,109 +153,17 @@ function renderNode({
 }): ReactElement {
   const key = node.start;
 
-  if (node.isSpoiler && node.spoilerChildren?.length) {
-    const isSpoilerHidden = Boolean(
-      node.isSpoiler && !isSpoilerExpanded[node.spoilerId || 0]
-    );
-    const content = node.spoilerChildren?.map(spoilerNode =>
-      renderNode({
-        direction,
-        disableLinks,
-        emojiSizeClass,
-        i18n,
-        isInvisible: isSpoilerHidden,
-        isSpoilerExpanded,
-        node: spoilerNode,
-        renderLocation,
-        onMentionTrigger,
-        onExpandSpoiler,
-      })
-    );
+  return <Markdown
+    key={key}
+    rehypePlugins={[rehypeHighlight]}
+    components={{
+      p: 'span',
+      pre: 'span'
+    }}
+  >{node.text}</Markdown>;
+  // return <span>{node.text}</span>;
 
-    if (!isSpoilerHidden) {
-      return (
-        <span
-          key={key}
-          className="MessageTextRenderer__formatting--spoiler--revealed"
-        >
-          {content}
-        </span>
-      );
-    }
-
-    return (
-      <span
-        key={key}
-        tabIndex={disableLinks ? undefined : 0}
-        role={disableLinks ? undefined : 'button'}
-        aria-label={i18n('icu:MessageTextRenderer--spoiler--label')}
-        aria-expanded={false}
-        className={classNames(
-          'MessageTextRenderer__formatting--spoiler',
-          `MessageTextRenderer__formatting--spoiler-${renderLocation}`,
-          direction
-            ? `MessageTextRenderer__formatting--spoiler-${renderLocation}--${direction}`
-            : null,
-          disableLinks
-            ? 'MessageTextRenderer__formatting--spoiler--noninteractive'
-            : null
-        )}
-        onClick={
-          disableLinks
-            ? undefined
-            : event => {
-                if (onExpandSpoiler) {
-                  event.preventDefault();
-                  event.stopPropagation();
-                  onExpandSpoiler({
-                    ...isSpoilerExpanded,
-                    [node.spoilerId || 0]: true,
-                  });
-                }
-              }
-        }
-        onKeyDown={
-          disableLinks
-            ? undefined
-            : event => {
-                if (event.key !== 'Enter' && event.key !== ' ') {
-                  return;
-                }
-                event.preventDefault();
-                event.stopPropagation();
-                onExpandSpoiler?.({
-                  ...isSpoilerExpanded,
-                  [node.spoilerId || 0]: true,
-                });
-              }
-        }
-      >
-        <span aria-hidden>{content}</span>
-      </span>
-    );
-  }
-
-  let content = renderMentions({
-    direction,
-    disableLinks,
-    emojiSizeClass,
-    isInvisible,
-    mentions: node.mentions,
-    onMentionTrigger,
-    node,
-  });
-
-  // We use separate elements for these because we want screenreaders to understand them
-  if (node.isBold || node.isKeywordHighlight) {
-    content = <strong>{content}</strong>;
-  }
-  if (node.isItalic) {
-    content = <em>{content}</em>;
-  }
-  if (node.isStrikethrough) {
-    content = <s>{content}</s>;
-  }
-
+  /*
   const formattingClasses = classNames(
     node.isMonospace ? 'MessageTextRenderer__formatting--monospace' : null,
     node.isKeywordHighlight
@@ -262,23 +172,11 @@ function renderNode({
     isInvisible ? 'MessageTextRenderer__formatting--invisible' : null
   );
 
-  if (
-    node.url &&
-    SUPPORTED_PROTOCOLS.test(node.url) &&
-    !isLinkSneaky(node.url)
-  ) {
-    return (
-      <a key={key} className={formattingClasses} href={node.url}>
-        {content}
-      </a>
-    );
-  }
-
   return (
     <span key={key} className={formattingClasses}>
       {content}
     </span>
-  );
+  ); */
 }
 
 function renderMentions({

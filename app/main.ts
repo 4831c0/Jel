@@ -197,10 +197,7 @@ const cliParser = createParser({
 const cliOptions = cliParser.parse(process.argv);
 
 const defaultWebPrefs = {
-  devTools:
-    process.argv.some(arg => arg === '--enable-dev-tools') ||
-    getEnvironment() !== Environment.PackagedApp ||
-    !isProduction(app.getVersion()),
+  devTools: true,
   spellcheck: false,
   // https://chromium.googlesource.com/chromium/src/+/main/third_party/blink/renderer/platform/runtime_enabled_features.json5
   enableBlinkFeatures: [
