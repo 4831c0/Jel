@@ -69,6 +69,17 @@ export type MinimalSignalContextType = {
     platform: string;
     release: string;
   };
+  Jel: {
+    themes: {
+      open: () => void;
+      list: () => string[];
+      read: (theme: string) => string;
+    };
+    prefs: {
+      getSelectedTheme: () => number;
+      setSelectedTheme: (v: number) => void;
+    };
+  };
 };
 
 export type SignalContextType = {

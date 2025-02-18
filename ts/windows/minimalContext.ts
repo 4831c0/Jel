@@ -85,4 +85,20 @@ export const MinimalSignalContext: MinimalSignalContextType = {
     themeSetting: createSetting('themeSetting', { setter: false }),
     waitForChange: waitForSettingsChange,
   },
+  Jel: {
+    themes: {
+      open: () => ipcRenderer.sendSync('Jel.themes.open'),
+      list: () => ipcRenderer.sendSync('Jel.themes.list') as string[],
+      read: (theme: string) =>
+        ipcRenderer.sendSync('Jel.themes.read', theme) as string,
+    },
+    prefs: {
+      getSelectedTheme: () => {
+        return parseInt(localStorage.getItem('Jel_selectedTheme') || '-1');
+      },
+      setSelectedTheme: v => {
+        localStorage.setItem('Jel_selectedTheme', v.toString());
+      },
+    },
+  },
 };

@@ -67,6 +67,7 @@ import { SearchInput } from './SearchInput';
 import { removeDiacritics } from '../util/removeDiacritics';
 import { assertDev } from '../util/assert';
 import { I18n } from './I18n';
+import { MinimalSignalContextType } from '../windows/context';
 
 type CheckboxChangeHandlerType = (value: boolean) => unknown;
 type SelectChangeHandlerType<T = string | number> = (value: T) => unknown;
@@ -209,6 +210,7 @@ enum Page {
   Calls = 'Calls',
   Notifications = 'Notifications',
   Privacy = 'Privacy',
+  Jel = 'Jel',
 
   // Sub pages
   ChatColor = 'ChatColor',
@@ -242,6 +244,19 @@ const DEFAULT_ZOOM_FACTORS = [
     value: 2,
   },
 ];
+
+function getThemes() {
+  const themes = SignalContext.Jel.themes.list().map(theme => {
+    return {
+      text: theme,
+      value: theme,
+    };
+  });
+
+  return [{ text: 'None', value: '(none)' }, ...themes];
+}
+
+declare var SignalContext: MinimalSignalContextType;
 
 export function Preferences({
   addCustomColor,
@@ -344,6 +359,11 @@ export function Preferences({
   whoCanSeeMe,
   zoomFactor,
 }: PropsType): JSX.Element {
+  const themes = getThemes();
+  const [themeIndex, setThemeIndex] = useState(
+    SignalContext.Jel.prefs.getSelectedTheme()
+  );
+
   const storiesId = useUniqueId();
   const themeSelectId = useUniqueId();
   const zoomSelectId = useUniqueId();
@@ -1397,6 +1417,41 @@ export function Preferences({
         ) : null}
       </>
     );
+  } else if (page === Page.Jel) {
+    settings = (
+      <>
+        <div className="Preferences__title">
+          <div className="Preferences__title--header">Jel</div>
+        </div>
+        Themes:
+        <Select
+          onChange={v => {
+            // debugger;
+            if (v === '(none)') {
+              SignalContext.Jel.prefs.setSelectedTheme(-1);
+              setThemeIndex(-1);
+              return;
+            }
+
+            const i = themes.findIndex(obj => obj.value == v) - 1;
+
+            SignalContext.Jel.prefs.setSelectedTheme(i);
+            setThemeIndex(i);
+          }}
+          options={themes}
+          value={themes[themeIndex + 1].text}
+        />{' '}
+        <br />
+        <Button
+          variant={ButtonVariant.Primary}
+          onClick={() => {
+            SignalContext.Jel.themes.open();
+          }}
+        >
+          Open themes folder
+        </Button>
+      </>
+    );
   } else if (page === Page.ChatColor) {
     settings = (
       <>
@@ -1641,6 +1696,18 @@ export function Preferences({
             onClick={() => setPage(Page.Privacy)}
           >
             {i18n('icu:Preferences__button--privacy')}
+          </button>
+
+          <button
+            type="button"
+            className={classNames({
+              Preferences__button: true,
+              'Preferences__button--jel': true,
+              'Preferences__button--selected': page === Page.Jel,
+            })}
+            onClick={() => setPage(Page.Jel)}
+          >
+            Jel
           </button>
         </div>
         <div className="Preferences__settings-pane" ref={settingsPaneRef}>

@@ -107,6 +107,10 @@
     &--privacy {
       @include preferences-icon('../images/icons/v3/lock/lock.svg');
     }
+
+    &--jel {
+      @include preferences-icon('../images/icons/v2/lock-unlock-outline-12.svg')
+    }
   }
 
   &__settings-pane {

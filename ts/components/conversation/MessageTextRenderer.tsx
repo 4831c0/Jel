@@ -3,8 +3,8 @@
 
 import React from 'react';
 import type { ReactElement } from 'react';
-import Markdown from 'react-markdown'
-import rehypeHighlight from 'rehype-highlight'
+import Markdown from 'react-markdown';
+import rehypeHighlight from 'rehype-highlight';
 import emojiRegex from 'emoji-regex';
 import { sortBy } from 'lodash';
 
@@ -27,7 +27,6 @@ import { Emojify } from './Emojify';
 import { AddNewLines } from './AddNewLines';
 import type { SizeClassType } from '../emoji/lib';
 import type { LocalizerType } from '../../types/Util';
-import { hr } from 'intl-tel-input/i18n';
 import classNames from 'classnames';
 
 const EMOJI_REGEXP = emojiRegex();
@@ -280,12 +279,13 @@ function renderNode({
   if (node.mentions.length < 1) {
     return (
       <Markdown
-      key={key}
-      rehypePlugins={[rehypeHighlight]}
-      components={{
-        p: 'span',
-        pre: 'span'
-      }} >
+        key={key}
+        rehypePlugins={[rehypeHighlight]}
+        components={{
+          p: 'span',
+          pre: 'span',
+        }}
+      >
         {node.text}
       </Markdown>
     );

@@ -206,6 +206,7 @@ import {
 import { postSaveUpdates } from './util/cleanup';
 import { handleDataMessage } from './messages/handleDataMessage';
 import { MessageModel } from './models/messages';
+import { SignalContext } from './windows/context';
 
 export function isOverHourIntoPast(timestamp: number): boolean {
   return isNumber(timestamp) && isOlderThan(timestamp, HOUR);
@@ -3758,4 +3759,14 @@ export async function startApp(): Promise<void> {
   }
 }
 
+document.addEventListener('DOMContentLoaded', () => {
+  const style = document.getElementById('jel-theme');
+  if (!style) return;
+  const i = SignalContext.Jel.prefs.getSelectedTheme();
+  const themes = SignalContext.Jel.themes.list();
+  if (i < 0) return;
+
+  const theme = SignalContext.Jel.themes.read(themes[i]);
+  style.innerHTML = theme;
+});
 window.startApp = startApp;

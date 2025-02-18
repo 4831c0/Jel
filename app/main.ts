@@ -124,6 +124,7 @@ import { SafeStorageBackendChangeError } from '../ts/types/SafeStorageBackendCha
 import { LINUX_PASSWORD_STORE_FLAGS } from '../ts/util/linuxPasswordStoreFlags';
 import { getOwn } from '../ts/util/getOwn';
 import { safeParseLoose, safeParseUnknown } from '../ts/util/schemas';
+import { Jel } from './jel';
 
 const animationSettings = systemPreferences.getAnimationSettings();
 
@@ -155,7 +156,7 @@ let settingsChannel: SettingsChannel | undefined;
 
 const activeWindows = new Set<BrowserWindow>();
 
-function getMainWindow() {
+export function getMainWindow() {
   return mainWindow;
 }
 
@@ -2704,6 +2705,24 @@ ipc.on('delete-all-data', () => {
   if (mainWindow && mainWindow.webContents) {
     mainWindow.webContents.send('delete-all-data');
   }
+});
+
+Jel.themes.init();
+
+ipc.on('Jel.themes.open', event => {
+  event.returnValue = Jel.themes.open();
+});
+
+ipc.on('Jel.themes.list', event => {
+  event.returnValue = Jel.themes.list();
+});
+
+ipc.on('Jel.themes.read', (event, arg: string) => {
+  event.returnValue = Jel.themes.read(arg);
+});
+
+ipc.on('Jel.themes.set', (event, arg: string) => {
+  event.returnValue = true;
 });
 
 ipc.on('get-config', async event => {
