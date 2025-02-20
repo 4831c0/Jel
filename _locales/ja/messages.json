@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "このメディアはダウンロードできません"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "メディアはご利用になれません"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "さらに詳しく"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "このファイルはダウンロードできません"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "ファイルがダウンロードできません"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "このボイスメッセージはダウンロードできません"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "このメッセージは不完全です"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "ステッカーはご利用になれません"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "ボイスメッセージはご利用になれません"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "ファイルがダウンロードできません"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "完全なメッセージがダウンロードできません"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "メディアはご利用になれません"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "ステッカーはご利用になれません"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "ボイスメッセージはご利用になれません"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "この端末をリンクしたとき、このファイルはスマートフォンから移行されませんでした。端末をリンクした時点で45日以上経過したメディアやファイルは同期できません。"
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "この端末をリンクしたとき、このメッセージの完全なテキストはスマートフォンから移行されませんでした。端末をリンクした時点で45日以上経過した長いテキストメッセージは同期できません。"
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "この端末をリンクしたとき、このメディアはスマートフォンから移行されませんでした。端末をリンクした時点で45日以上経過したメディアは同期できません。"
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "この端末をリンクしたとき、このステッカーはスマートフォンから移行されませんでした。端末をリンクした時点で45日以上経過したメディアやファイルは同期できません。"
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "この端末をリンクしたときにこのボイスメッセージはスマートフォンから移行されませんでした。端末をリンクした時点で45日以上経過したメディアやファイルは同期できません。"
   },
   "icu:save": {
     "messageformat": "保存"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "端末名"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "この端末の名前を変更するには、スマートフォンでSignalを開き、「設定」 > 「リンク済み端末」に移動します。"
   },
   "icu:chooseDeviceName": {
     "messageformat": "この端末の名前を設定してください"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "メッセージの移行が間もなく完了します…"
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "キャンセルしています…"
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "ダウンロード中..."
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "同期のプロセスも含め、メッセージ情報とチャット情報はエンドツーエンドの暗号化で保護されています。<learnMoreLink>さらに詳しく</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "転送をキャンセルしますか？"
+    "messageformat": "端末へのリンク付けをキャンセルしますか？"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "メッセージとメディアの復元が完了していません。キャンセルを選択した場合、端末はメッセージ履歴なしの状態でリンクされます。"
+    "messageformat": "キャンセルを選択するとこの端末はリンクされず、メッセージやメディアは移行されません。"
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "転送を続行する"
+    "messageformat": "リンク付けを続行する"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "転送をキャンセルする"
+    "messageformat": "リンク付けをキャンセルする"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "メッセージの移行中にエラーが発生しました"
@@ -4254,7 +4299,7 @@
     "messageformat": "すべてのチャットの色をリセットする"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "既定の色をリセット"
+    "messageformat": "既定の色をリセットする"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "リセットする"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "チャット履歴と過去45日間のメディアを、新しいリンク済み端末に移行するかどうかを選択できるようになりました。移行プロセスはエンドツーエンドで暗号化されており、完全にオプションです。"
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "Desktopアプリのボタンのテキストを、AndroidとiOSと同じになるようにアップデートしました。"
   }
 }

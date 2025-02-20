@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "Ez a médiatartalom nem érhető el"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "Médiafájl nem érhető el"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "Tudj meg többet!"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "Ez a fájl nem érhető el"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "A fájl nem érhető el"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "Ez a hangüzenet nem érhető el"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "Ez az üzenet hiányos"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "Matrica nem elérhető"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "Hangüzenet nem érhető el"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "A fájl nem érhető el"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "A teljes üzenet nem érhető el"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "Médiafájl nem érhető el"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "Matrica nem elérhető"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "Hangüzenet nem érhető el"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "Ez a fájl nem lett áthelyezve a telefonodról az eszköz összekapcsolásakor. Az eszköz összekapcsolásakor 45 napnál régebbi médiafájlok és fájlok nem szinkronizálhatók."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "Az üzenetben szereplő teljes szöveg nem került át a telefonodról az eszköz összekapcsolásakor. Az eszköz összekapcsolásakor 45 napnál régebbi hosszú szöveges üzenetek nem szinkronizálhatók."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "Ez a médiafájl nem lett áthelyezve a telefonodról az eszköz összekapcsolásakor. Az eszköz összekapcsolásakor 45 napnál régebbi médiafájl nem szinkronizálható."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "Ez a matrica nem lett áthelyezve a telefonodról az eszköz összekapcsolásakor. Az eszköz összekapcsolásakor 45 napnál régebbi médiafájlok és fájlok nem szinkronizálhatók."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "Ez a hangüzenet nem lett áthelyezve a telefonodról az eszköz összekapcsolásakor. Az eszköz összekapcsolásakor 45 napnál régebbi médiafájlok és fájlok nem szinkronizálhatók."
   },
   "icu:save": {
     "messageformat": "Mentés"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "Eszköz neve"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "Az eszköz nevének megváltoztatásához nyisd meg a Signal alkalmazást a telefonodon, és lépj a Beállítások > Kapcsolt eszközök menüpontra"
   },
   "icu:chooseDeviceName": {
     "messageformat": "Jelenlegi eszköz nevének megadása"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "Üzenetátvitel befejezése..."
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "Visszavonás..."
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "Felkészülés a letöltésre..."
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "Az üzeneteket és a csevegési információkat végpontok közötti titkosítás védi, beleértve a szinkronizálási folyamatot is. <learnMoreLink>Tudj meg többet!</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "Átvitel törlése?"
+    "messageformat": "Megszakítod az eszköz összekapcsolását?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "Az üzenetek és a médiafájl helyreállítása nem fejeződött be. Ha a törlés mellett döntesz, az eszköz az üzenet-előzmények nélkül lesz összekapcsolva."
+    "messageformat": "Ha a törlés mellett döntesz, ez az eszköz nem lesz összekapcsolva, és az üzenetek vagy médiafájlok nem kerülnek átvitelre."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "Átvitel folytatása"
+    "messageformat": "Összekapcsolás folytatása"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "Átvitel törlése"
+    "messageformat": "Összekapcsolás törlése"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "Hiba történt az üzenetek átvitele során"
@@ -4254,7 +4299,7 @@
     "messageformat": "Összes csevegés színének visszaállítása"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "Alapértelmezett csevegésszín visszaállítása"
+    "messageformat": "Gyári szín alaphelyzetbe"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "Visszaállítás"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "Amikor összekapcsolod elsődleges Signal-eszközödet egy új asztali számítógéppel, magaddal viheted csevegési előzményeidet és az elmúlt 45 nap médiatartalmát. Az átviteli folyamat végponttól végpontig titkosított, és teljesen opcionális. Amikor arról kell döntened, hogy magad mögött hagyod-e a múltat vagy sem, a saját eszközeidre kell hagyatkoznod."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "Frissítettük az asztali alkalmazás gombjának szövegét, hogy megfeleljen az Android és az iOS rendszernek."
   }
 }

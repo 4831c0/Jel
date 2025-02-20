@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "Este contido multimedia non está dispoñible"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "Arquivo multimedia non dispoñible"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "Saber máis"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "Este arquivo non está dispoñible"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "Arquivo non dispoñible"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "Esta mensaxe de voz non está dispoñible"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "Esta mensaxe está incompleta"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "Sticker non dispoñible"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "Mensaxe de voz non dispoñible"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "Arquivo non dispoñible"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "A mensaxe completa non está dispoñible"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "Arquivo multimedia non dispoñible"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "Sticker non dispoñible"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "Mensaxe de voz non dispoñible"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "Non se transferiu este arquivo dende o teu teléfono cando se vinculou este dispositivo. Os arquivos e arquivos multimedia que teñan máis de 45 días no momento da vinculación do dispositivo non se poden sincronizar."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "Non se transferiu todo o texto desta mensaxe dende o teu teléfono cando se vinculou este dispositivo. As mensaxes de texto que teñan máis de 45 días no momento da vinculación do dispositivo non se poden sincronizar."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "Non se transferiu este arquivo multimedia dende o teu teléfono cando se vinculou este dispositivo. Os arquivos multimedia que teñan máis de 45 días no momento da vinculación do dispositivo non se poden sincronizar."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "Non se transferiu este sticker dende o teu teléfono cando se vinculou este dispositivo. Os arquivos e arquivos multimedia que teñan máis de 45 días no momento da vinculación do dispositivo non se poden sincronizar."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "Non se transferiu esta mensaxe de voz dende o teu teléfono cando se vinculou este dispositivo. Os arquivos e arquivos multimedia que teñan máis de 45 días no momento da vinculación do dispositivo non se poden sincronizar."
   },
   "icu:save": {
     "messageformat": "Gardar"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "Nome do dispositivo"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "Para cambiar o nome deste dispositivo, abre Signal no teu teléfono e vai a «Signal» > «Dispositivos vinculados»"
   },
   "icu:chooseDeviceName": {
     "messageformat": "Escolle o nome deste dispositivo"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "Rematando transferencia de mensaxes…"
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "Cancelando…"
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "Preparando a descarga…"
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "As mensaxes e a información das conversas están protexidas por unha encriptación de extremo a extremo, incluído o proceso de sincronización. <learnMoreLink>Saber máis</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "Cancelar transferencia?"
+    "messageformat": "Cancelar a vinculación do dispositivo?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "Non se completou a recuperación das túas mensaxes e arquivos multimedia. Se cancelas o proceso, vincularase o teu dispositivo sen o historial de mensaxes."
+    "messageformat": "Se escolles cancelala, este dispositivo non se vinculará e non se transferirán as mensaxes e os arquivos multimedia."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "Continuar a transferencia"
+    "messageformat": "Continuar coa vinculación"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "Cancelar transferencia"
+    "messageformat": "Cancelar vinculación"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "Aconteceu un erro ao transferir as mensaxes"
@@ -4254,7 +4299,7 @@
     "messageformat": "Restablecer todas as cores da conversa"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "Restablecer por defecto"
+    "messageformat": "Restablecer cores por defecto"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "Restablecer"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "Agora podes transferir o teu historial de conversas e o contido multimedia dos últimos 45 días a un novo dispositivo vinculado. A transferencia está cifrada de extremo a extremo e non é obrigatoria."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "Cambiamos o texto do botón da aplicación de escritorio para que sexa igual ao de Android e iOS."
   }
 }

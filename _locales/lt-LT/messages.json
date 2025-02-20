@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "Šis įrašas neprieinamas"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "Įrašas nepasiekiamas"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "Sužinoti daugiau"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "Šis failas neprieinamas"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "Failas nepasiekiamas"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "Ši balso žinutė nepasiekiama"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "Ši žinutė neužbaigta"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "Lipdukas nepasiekiamas"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "Balso žinutė nepasiekiama"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "Failas nepasiekiamas"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "Visa žinutė nepasiekiama"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "Įrašas nepasiekiamas"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "Lipdukas nepasiekiamas"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "Balso žinutė nepasiekiama"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "Šis failas nebuvo perkeltas iš jūsų telefono susiejus šį įrenginį. Įrašų ir failų, kurie įrenginio susiejimo metu yra senesni nei 45 dienos, sinchronizuoti negalima."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "Visas šios žinutės tekstas nebuvo perkeltas iš jūsų telefono susiejus šį įrenginį. Ilgų tekstinių žinučių, kurios įrenginio susiejimo metu yra senesnės nei 45 dienos, sinchronizuoti negalima."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "Šis įrašas nebuvo perkeltas iš jūsų telefono susiejus šį įrenginį. Įrašų, kurie įrenginio susiejimo metu yra senesni nei 45 dienos, sinchronizuoti negalima."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "Šis lipdukas nebuvo perkeltas iš jūsų telefono susiejus šį įrenginį. Įrašų ir failų, kurie įrenginio susiejimo metu yra senesni nei 45 dienos, sinchronizuoti negalima."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "Ši balso žinutė nebuvo perkelta iš jūsų telefono susiejus šį įrenginį. Įrašų ir failų, kurie įrenginio susiejimo metu yra senesni nei 45 dienos, sinchronizuoti negalima."
   },
   "icu:save": {
     "messageformat": "Įrašyti"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "Įrenginio pavadinimas"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "Norėdami pakeisti šio įrenginio pavadinimą, savo telefone atidarykite „Signal“ ir eikite į Nustatymai > Susieti įrenginiai"
   },
   "icu:chooseDeviceName": {
     "messageformat": "Pasirinkite šio įrenginio pavadinimą"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "Baigiamas žinučių perkėlimas..."
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "Atšaukiama..."
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "Ruošiamasi atsisiųsti..."
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "Žinutės ir pokalbių informacija yra visiškai užšifruoti, įskaitant ir sinchronizavimo procesą. <learnMoreLink>Sužinoti daugiau</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "Atšaukti perkėlimą?"
+    "messageformat": "Atšaukti įrenginio susiejimą?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "Jūsų žinučių ir įrašų atkūrimas nebaigtas. Jei nuspręsite atšaukti, jūsų įrenginys bus susietas be žinučių istorijos."
+    "messageformat": "Jei nuspręsite atšaukti, šis įrenginys nebus susietas ir nebus perkeltos žinutės bei įrašai."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "Tęsti perkėlimą"
+    "messageformat": "Tęsti siejimą"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "Atšaukti perkėlimą"
+    "messageformat": "Atšaukti siejimą"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "Klaida perkeliant žinutes"
@@ -4254,7 +4299,7 @@
     "messageformat": "Atstatyti visų pokalbių spalvas"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "Atstatyti numatytąją"
+    "messageformat": "Atstatyti numatytąsias spalvas"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "Atstatyti"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "Dabar galite perkelti savo pokalbių istoriją ir paskutinių 45 dienų įrašus į naują susietąjį įrenginį."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "Atnaujinome mygtuko tekstą programėlėje kompiuteriams, kad suvienodintumėme „Android“ ir „iOS“."
   }
 }

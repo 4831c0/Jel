@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "呢個媒體已經冇咗"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "媒體已經冇咗"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "了解多啲"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "呢個檔案已經冇咗"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "檔案已經冇咗"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "呢個語音訊息已經冇咗"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "呢個訊息唔完整"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "貼圖已經冇咗"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "語音訊息已經冇咗"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "檔案已經冇咗"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "完整嘅訊息已經冇咗"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "媒體已經冇咗"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "貼圖已經冇咗"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "語音訊息已經冇咗"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "連結呢部機嗰陣，呢個檔案冇喺你手機度轉移過嚟。連結裝置嗰陣，超過 45 日嘅媒體同檔案冇得同步。"
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "連結呢部機嗰陣，呢個訊息嘅完整文字冇喺你手機度轉移過嚟。連結裝置嗰陣，超過 45 日嘅長文字訊息冇得同步。"
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "連結呢部機嗰陣，呢個媒體冇喺你手機度轉移過嚟。連結裝置嗰陣，超過 45 日嘅媒體冇得同步。"
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "連結呢部機嗰陣，呢個貼圖冇喺你手機度轉移過嚟。連結裝置嗰陣，超過 45 日嘅媒體同檔案冇得同步。"
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "連結呢部機嗰陣，呢個語音訊息冇喺你手機度轉移過嚟。連結裝置嗰陣，超過 45 日嘅媒體同檔案冇得同步。"
   },
   "icu:save": {
     "messageformat": "儲存"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "裝置名稱"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "如果想改咗呢部機個名，請喺手機打開 Signal，然後去「設定」>「連結咗嘅裝置」"
   },
   "icu:chooseDeviceName": {
     "messageformat": "選擇呢部裝置個名"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "完成緊訊息轉移..."
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "取消緊..."
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "準備緊下載..."
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "訊息同聊天資料都受到端對端加密保護，包括同步過程。<learnMoreLink>了解詳情</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "係咪要取消轉移？"
+    "messageformat": "係咪取消裝置連結？"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "你嘅訊息同媒體仲未還原晒喎。如果你揀取消，連結你部機之後就會冇訊息紀錄。"
+    "messageformat": "如果你揀取消，你部機就唔會連結，而訊息同媒體都唔會轉移。"
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "繼續轉移"
+    "messageformat": "繼續連結"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "取消轉移"
+    "messageformat": "取消連結"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "轉移訊息嗰陣發生錯誤"
@@ -4254,7 +4299,7 @@
     "messageformat": "重設所有聊天色彩"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "重設預設值"
+    "messageformat": "重設預設嘅顏色"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "重設"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "而家，如果你想將主要 Signal 裝置連去新嘅桌面電腦，可以帶走埋聊天紀錄同最近 45 日嘅媒體。轉移過程係端對端加密，完全由你選擇。至於係咪要拋開過去，就你自己決定喇。"
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "情人節最緊要成雙成對，所以我哋更新咗桌面版 APP 個掣嘅文字標籤，嚟襯返手機入面同一個掣。小小嘅改變，表示我哋在乎你。"
   }
 }

@@ -42,7 +42,7 @@ import { findStoryMessages } from '../util/findStoryMessage';
 import { getRoomIdFromCallLink } from '../util/callLinksRingrtc';
 import { isNotNil } from '../util/isNotNil';
 import { normalizeServiceId } from '../types/ServiceId';
-import { BodyRange } from '../types/BodyRange';
+import { BodyRange, trimMessageWhitespace } from '../types/BodyRange';
 import { hydrateStoryContext } from '../util/hydrateStoryContext';
 import { isMessageEmpty } from '../util/isMessageEmpty';
 import { isValidTapToView } from '../util/isValidTapToView';
@@ -153,48 +153,44 @@ export async function handleDataMessage(
             ? data.unidentifiedStatus
             : [];
 
-        unidentifiedStatus.forEach(
-          ({ destinationServiceId, destination, unidentified }) => {
-            const identifier = destinationServiceId || destination;
-            if (!identifier) {
-              return;
-            }
-
-            const destinationConversation =
-              window.ConversationController.lookupOrCreate({
-                serviceId: destinationServiceId,
-                e164: destination || undefined,
-                reason: `handleDataMessage(${initialMessage.timestamp})`,
-              });
-            if (!destinationConversation) {
-              return;
-            }
-
-            const updatedAt: number =
-              data && isNormalNumber(data.timestamp)
-                ? data.timestamp
-                : Date.now();
-
-            const previousSendState = getOwn(
-              sendStateByConversationId,
-              destinationConversation.id
-            );
-            sendStateByConversationId[destinationConversation.id] =
-              previousSendState
-                ? sendStateReducer(previousSendState, {
-                    type: SendActionType.Sent,
-                    updatedAt,
-                  })
-                : {
-                    status: SendStatus.Sent,
-                    updatedAt,
-                  };
-
-            if (unidentified) {
-              unidentifiedDeliveriesSet.add(identifier);
-            }
+        unidentifiedStatus.forEach(({ destinationServiceId, unidentified }) => {
+          if (!destinationServiceId) {
+            return;
           }
-        );
+
+          const destinationConversation =
+            window.ConversationController.lookupOrCreate({
+              serviceId: destinationServiceId,
+              reason: `handleDataMessage(${initialMessage.timestamp})`,
+            });
+          if (!destinationConversation) {
+            return;
+          }
+
+          const updatedAt: number =
+            data && isNormalNumber(data.timestamp)
+              ? data.timestamp
+              : Date.now();
+
+          const previousSendState = getOwn(
+            sendStateByConversationId,
+            destinationConversation.id
+          );
+          sendStateByConversationId[destinationConversation.id] =
+            previousSendState
+              ? sendStateReducer(previousSendState, {
+                  type: SendActionType.Sent,
+                  updatedAt,
+                })
+              : {
+                  status: SendStatus.Sent,
+                  updatedAt,
+                };
+
+          if (unidentified) {
+            unidentifiedDeliveriesSet.add(destinationServiceId);
+          }
+        });
 
         toUpdate.set({
           sendStateByConversationId,
@@ -539,15 +535,26 @@ export async function handleDataMessage(
         dataMessage.attachments ?? [],
         attachment => MIME.isLongMessage(attachment.contentType)
       );
+      const bodyAttachment = longMessageAttachments[0];
 
       // eslint-disable-next-line no-param-reassign
       message = window.MessageCache.register(message);
+
       message.set({
         id: messageId,
         attachments: normalAttachments,
-        body: dataMessage.body,
-        bodyAttachment: longMessageAttachments[0],
-        bodyRanges: dataMessage.bodyRanges,
+        bodyAttachment,
+        // We don't want to trim if we'll be downloading a body attachment; we might
+        // drop bodyRanges which apply to the longer text we'll get in that download.
+        ...(bodyAttachment
+          ? {
+              body: dataMessage.body,
+              bodyRanges: dataMessage.bodyRanges,
+            }
+          : trimMessageWhitespace({
+              body: dataMessage.body,
+              bodyRanges: dataMessage.bodyRanges,
+            })),
         contact: dataMessage.contact,
         conversationId: conversation.id,
         decrypted_at: now,

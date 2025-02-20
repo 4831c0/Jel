@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "Dette medie er ikke tilgængeligt"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "Mediet er ikke tilgængeligt"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "Læs mere"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "Denne fil er ikke tilgængelig"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "Fil ikke tilgængelig"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "Denne stemmebesked er ikke tilgængelig"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "Dette er ikke hele beskeden"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "Klistermærket er ikke tilgængeligt"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "Stemmebeskeden er ikke tilgængelig"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "Fil ikke tilgængelig"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "Hele beskeden er ikke tilgængelig"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "Mediet er ikke tilgængeligt"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "Klistermærket er ikke tilgængeligt"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "Stemmebeskeden er ikke tilgængelig"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "Denne fil blev ikke overført fra din telefon, da denne enhed blev tilknyttet. Medier og filer, der er ældre end 45 dage, når enheder tilknyttes, kan ikke synkroniseres."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "Hele teksten i denne besked blev ikke overført fra din telefon, da denne enhed blev tilknyttet. Lange beskeder, der er ældre end 45 dage gamle, når enheder tilknyttes, kan ikke synkroniseres."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "Dette medie blev ikke overført fra din telefon, da denne enhed blev tilknyttet. Medier, der er ældre end 45 dage, når enheder tilknyttes, kan ikke synkroniseres."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "Dette klistermærke blev ikke overført fra din telefon, da denne enhed blev tilknyttet. Medier og filer, der er ældre end 45 dage, når enheder tilknyttes, kan ikke synkroniseres."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "Denne stemmebesked blev ikke overført fra din telefon, da denne enhed blev tilknyttet. Medier og filer, der er ældre end 45 dage, når enheder tilknyttes, kan ikke synkroniseres."
   },
   "icu:save": {
     "messageformat": "Gem"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "Enhedsnavn"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "For at ændre navnet på denne enhed skal du åbne Signal på din telefon og gå ind i Indstillinger > Forbundne enheder"
   },
   "icu:chooseDeviceName": {
     "messageformat": "Vælg denne enheds navn"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "Afslutter beskedoverførsel..."
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "Annullerer..."
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "Forbereder download..."
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "Beskeder og chatoplysninger er beskyttet af end-to-end-kryptering, herunder også under synkroniseringen. <learnMoreLink>Få mere at vide</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "Vil du annullere overførslen?"
+    "messageformat": "Vil du annullere enhedstilknytningen?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "Dine beskeder og medier er ikke gendannet endnu. Hvis du vælger at annullere, bliver din enhed tilknyttet uden din beskedhistorik."
+    "messageformat": "Hvis du vælger at annullere, bliver din enhed tilknyttet uden din beskedhistorik."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "Fortsæt overførsel"
+    "messageformat": "Fortsæt tilknytning"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "Annuller overførsel"
+    "messageformat": "Annuller tilknytning"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "Fejl ved overførsel af beskeder"
@@ -4254,7 +4299,7 @@
     "messageformat": "Nulstil alle chatfarver"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "Nulstil standard"
+    "messageformat": "Nulstil standardfarver"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "Nulstil"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "Når du forbinder din primære Signal-enhed til en ny computer, kan du overføre din chathistorik og medierne for de sidste 45 dage. Overførselsprocessen er end-til-end-krypteret og helt valgfri. Når det kommer til at træffe valget om, hvorvidt du vil lade fortiden være fortid eller ej, er det helt op til dig."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "Valentinsdag handler om at fejre et perfekt match, så vi har opdateret tekstetiketten på en knap i appen til computer for at danne et sødt par med den samme knap på din telefon. Det lyder som en meget lille ændring, og det er det også, men nogle gange er det de små ting, der viser, hvor meget du holder af en person (eller ting)."
   }
 }

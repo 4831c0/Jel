@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "এই মিডিয়াটি আর নেই"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "মিডিয়া নেই"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "আরো জানুন"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "এই ফাইলটি আর নেই"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "ফাইলটি আর নেই"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "এই ভয়েস মেসেজটি আর নেই"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "এই মেসেজটি অসম্পূর্ণ"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "স্টিকার নেই"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "ভয়েস মেসেজ নেই"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "ফাইলটি আর নেই"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "সম্পূর্ণ মেসেজটি আর নেই"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "মিডিয়া নেই"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "স্টিকার নেই"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "ভয়েস মেসেজ নেই"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "এই ডিভাইসটি লিংক করার সময় আপনার ফোন থেকে এই ফাইলটি ট্রান্সফার করা হয়নি। ডিভাইস লিংক করার সময় 45 দিনের বেশি পুরনো মিডিয়া এবং ফাইল সমন্বয় করা যাবে না।"
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "এই ডিভাইসটি লিংক করার সময় এই মেসেজের সম্পূর্ণ টেক্সট আপনার ফোন থেকে ট্রান্সফার করা হয়নি। ডিভাইস লিংক করার সময় 45 দিনের বেশি পুরনো দীর্ঘ টেক্সট মেসেজ সমন্বয় করা যাবে না।"
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "এই ডিভাইসটি লিংক করার সময় আপনার ফোন থেকে এই ফাইলটি ট্রান্সফার করা হয়নি। ডিভাইস লিংক করার সময় 45 দিনের বেশি পুরনো মিডিয়া সমন্বয় করা যাবে না।"
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "এই ডিভাইসটি লিংক করার সময় আপনার ফোন থেকে এই ফাইলটি ট্রান্সফার করা হয়নি। ডিভাইস লিংক করার সময় 45 দিনের বেশি পুরনো মিডিয়া এবং ফাইল সমন্বয় করা যাবে না।"
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "এই ডিভাইসটি লিংক করার সময় আপনার ফোন থেকে এই ভয়েস মেসেজটি ট্রান্সফার করা হয়নি। ডিভাইস লিংক করার সময় 45 দিনের বেশি পুরনো মিডিয়া এবং ফাইল সমন্বয় করা যাবে না।"
   },
   "icu:save": {
     "messageformat": "সংরক্ষণ"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "ডিভাইস এর নাম"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "এই ডিভাইসের নাম পরিবর্তন করতে, আপনার ফোনে Signal খুলুন এবং সেটিংস > লিংক করা ডিভাইসে যান"
   },
   "icu:chooseDeviceName": {
     "messageformat": "এই ডিভাইস'র নাম চয়ন করুন"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "মেসেজ ট্রান্সফার চূড়ান্ত করা হচ্ছে..."
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "বাতিল করা হচ্ছে..."
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "ডাউনলোড করার জন্য প্রস্তুতি নিচ্ছে..."
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "সিঙ্ক প্রক্রিয়া সহ মেসেজ এবং চ্যাটের তথ্য এন্ড-টু-এন্ড এনক্রিপশন দ্বারা সুরক্ষিত। <learnMoreLink>আরো জানুন</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "স্থানান্তর বাতিল করবেন?"
+    "messageformat": "ডিভাইস লিংক করা বাতিল করবেন?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "আপনার মেসেজ এবং মিডিয়া পুনর্বহাল সম্পন্ন হয়নি। আপনি যদি বাতিল করতে চান, তবে আপনার মেসেজের ইতিহাস ছাড়াই আপনার ডিভাইস লিংক করা হবে।"
+    "messageformat": "আপনি যদি বাতিল করতে চান, তাহলে এই ডিভাইসটি লিংক করা হবে না এবং কোনো মেসেজ বা মিডিয়া ট্রান্সফার করা হবে না।"
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "স্থানান্তর চালিয়ে যান"
+    "messageformat": "লিংক করা চালিয়ে যান"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "স্থানান্তর বাতিল করুন"
+    "messageformat": "লিংক করা বাতিল করুন"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "আপনার মেসেজ ট্রান্সফারে ত্রুটি দেখা দিয়েছে"
@@ -4254,7 +4299,7 @@
     "messageformat": "সবগুলো চ্যাট-এর রং রিসেট করুন"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "ডিফল্ট রিসেট করুন"
+    "messageformat": "ডিফল্ট রং রিসেট করুন"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "রিসেট করুন"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "এখন আপনি আপনার চ্যাট-এর ইতিহাস ও আপনার গত 45 দিনের মিডিয়া একটি নতুন লিংক করা ডিভাইসে ট্রান্সফার করার জন্য বেছে নিতে পারবেন।"
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "আমরা ডেস্কটপ অ্যাপের একটি বাটনের লেখা Android ও iOS-এর সাথে মেলানোর জন্য আপডেট করেছি।"
   }
 }

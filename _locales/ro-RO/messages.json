@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "Acest fișier media nu este disponibil"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "Fișierul nu este disponibil"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "Află mai multe"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "Acest fișier nu este disponibil"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "Fișierul nu este disponibil"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "Acest mesaj vocal nu este disponibil"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "Acest mesaj este incomplet"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "Autocolantul nu este disponibil"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "Mesajul vocal nu este disponibil"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "Fișierul nu este disponibil"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "Mesaj complet nu este disponibil"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "Fișierul nu este disponibil"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "Autocolantul nu este disponibil"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "Mesajul vocal nu este disponibil"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "Acest fișier nu a fost transferat de pe telefonul tău când acest dispozitiv a fost asociat. Fișierele și conținutul media mai vechi de 45 de zile în momentul asocierii dispozitivului nu pot fi sincronizate."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "Textul complet din acest mesaj nu a fost transferat de pe telefonul tău atunci când acest dispozitiv a fost asociat. Mesajele text lungi mai vechi de 45 de zile la momentul asocierii dispozitivului nu pot fi sincronizate."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "Acest fișier nu a fost transferat de pe telefonul tău când acest dispozitiv a fost asociat. Fișierele media mai vechi de 45 de zile în momentul asocierii dispozitivului nu pot fi sincronizate."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "Acest fișier nu a fost transferat de pe telefonul tău când acest dispozitiv a fost asociat. Fișierele și conținutul media mai vechi de 45 de zile în momentul asocierii dispozitivului nu pot fi sincronizate."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "Acest mesaj vocal nu a fost transferat de pe telefonul tău când acest dispozitiv a fost asociat. Media și fișierele mai vechi de 45 de zile în momentul conectării dispozitivului nu pot fi sincronizate."
   },
   "icu:save": {
     "messageformat": "Salvează"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "Numele dispozitivului"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "Pentru a schimba numele acestui dispozitiv, deschide Signal pe telefon și navighează la Setări > Dispozitive asociate"
   },
   "icu:chooseDeviceName": {
     "messageformat": "Alege numele dispozitivului"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "Se finalizează transferul mesajelor..."
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "Se anulează…"
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "Se pregătește descărcarea..."
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "Mesajele și informațiile legate de conversații sunt protejate prin criptare end-to-end, inclusiv prin procesul de sincronizare. <learnMoreLink>Află mai multe</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "Anulezi transferul?"
+    "messageformat": "Anulezi asocierea dispozitivului?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "Nu s-a finalizat restabilirea mesajelor și a fișierelor. Dacă alegi să anulezi, dispozitivul tău va fi asociat fără istoricul mesajelor."
+    "messageformat": "Dacă alegi să anulezi, acest dispozitiv nu va fi asociat și niciun mesaj sau conținut media nu va fi transferat."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "Continuă transferul"
+    "messageformat": "Continuă asocierea"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "Anulează transferul"
+    "messageformat": "Anulează asocierea"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "Eroare la transferul mesajelor tale"
@@ -4254,7 +4299,7 @@
     "messageformat": "Resetare culori pentru toate conversațiile"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "Resetare implicită"
+    "messageformat": "Resetare culori implicite"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "Resetare"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "Acum, când conectezi dispozitivul Signal principal la un nou desktop, poți avea acces la istoricul conversațiilor și la fișierele media din ultimele 45 de zile. Procesul de transfer este criptat end-to-end și complet opțional. Când vine vorba de a alege dacă să lași sau nu trecutul în urmă, ești la mâna propriilor tale dispozitive."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "Ziua Îndrăgostiților înseamnă sărbătorirea unei potriviri perfecte, așa că am actualizat eticheta textului pe un singur buton din aplicația Desktop pentru a crea un cuplu drăguț cu același buton de pe telefon. Pare o schimbare foarte mică, și este, dar uneori lucrurile mărunte arată cât de mult îți pasă."
   }
 }

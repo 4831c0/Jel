@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "Цей медіафайл недоступний"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "Медіафайл недоступний"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "Докладніше"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "Цей файл недоступний"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "Файл недоступний"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "Це голосове повідомлення недоступне"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "Це повідомлення неповне"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "Стікер недоступний"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "Голосове повідомлення недоступне"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "Файл недоступний"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "Повне повідомлення недоступне"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "Медіафайл недоступний"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "Стікер недоступний"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "Голосове повідомлення недоступне"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "Коли ви зв'язали цей пристрій, файл не було перенесено з вашого телефону. Файли й медіафайли, надіслані чи отримані понад 45 днів тому, не буде синхронізовано після зв'язування нового пристрою."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "Коли ви зв'язали цей пристрій, повний текст повідомлення не було перенесено з вашого телефону. Довгі текстові повідомлення, надіслані чи отримані понад 45 днів тому, не буде синхронізовано після зв'язування нового пристрою."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "Коли ви зв'язали цей пристрій, медіафайл не було перенесено з вашого телефону. Медіафайли, надіслані чи отримані понад 45 днів тому, не буде синхронізовано після зв'язування нового пристрою."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "Коли ви зв'язали цей пристрій, стікер не було перенесено з вашого телефону. Файли й медіафайли, надіслані чи отримані понад 45 днів тому, не буде синхронізовано після зв'язування нового пристрою."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "Коли ви зв'язали цей пристрій, голосове повідомлення не було перенесено з вашого телефону. Файли й медіафайли, надіслані чи отримані понад 45 днів тому, не буде синхронізовано після зв'язування нового пристрою."
   },
   "icu:save": {
     "messageformat": "Зберегти"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "Назва пристрою"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "Щоб змінити назву цього пристрою, відкрийте Signal на телефоні й перейдіть у налаштування > Зв’язані пристрої"
   },
   "icu:chooseDeviceName": {
     "messageformat": "Оберіть назву пристрою"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "Перенесення повідомлень майже завершено…"
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "Скасування…"
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "Підготовка до завантаження…"
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "Повідомлення й інформацію про чати, а також сам процес синхронізації захищено наскрізним шифруванням. <learnMoreLink>Докладніше</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "Скасувати передачу даних?"
+    "messageformat": "Скасувати зв'язування пристрою?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "Відновлення повідомлень і медіафайлів не завершено. У разі скасування ваш пристрій буде зв'язано без перенесення історії повідомлень."
+    "messageformat": "У разі скасування пристрій не буде зв'язано, а повідомлення й медіафайли не буде перенесено."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "Продовжити передачу"
+    "messageformat": "Продовжити зв'язування"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "Скасувати передачу"
+    "messageformat": "Не зв'язувати"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "Помилка під час перенесення повідомлень"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "Тепер, зв'язуючи основний пристрій Signal з новим комп'ютером, ви також можете переносити історію чатів і медіафайли за минулі 45 днів. Процес перенесення захищено наскрізним шифруванням. А ще воно необов'язкове, тож тільки вам вирішувати, чи зберегти минуле в пам'яті пристрою, чи тільки у своїй власній."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "День святого Валентина — свято єднання споріднених душ, тому ми оновили текст на самотній кнопці в програмі для комп'ютера, і тепер вона створює ідеальну пару з такою ж кнопкою на телефоні. Це дрібничка, але саме такі деталі показують справжню турботу."
   }
 }

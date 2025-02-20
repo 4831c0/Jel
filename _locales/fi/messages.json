@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "Media ei ole saatavilla"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "Media ei saatavilla"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "Lue lisää"
   },
-  "icu:fileNotAvailable": {
+  "icu:attachmentNotAvailable__file": {
     "messageformat": "Tiedosto ei ole saatavilla"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "Puheviesti ei ole saatavilla"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "Tämä viesti ei ole täydellinen"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "Tarra ei saatavilla"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "Puheviesti ei saatavilla"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "Tiedosto ei ole saatavilla"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "Täydellinen viesti ei ole saatavilla"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "Media ei saatavilla"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "Tarra ei saatavilla"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "Puheviesti ei saatavilla"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "Tiedostoa ei siirretty puhelimestasi, kun laite yhdistettiin. Yhdistämishetkellä yli 45 päivää vanhempia medioita ja tiedostoja ei voida synkronoida."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "Tämän viestin tekstiä ei siirretty puhelimestasi kokonaisuudessaan, kun laite yhdistettiin. Yhdistämishetkellä yli 45 päivää vanhempia pitkiä tekstiviestejä ei voida synkronoida."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "Mediaa ei siirretty puhelimestasi, kun laite yhdistettiin. Yhdistämishetkellä yli 45 päivää vanhempia tiedostoja ja medioita ei voida synkronoida."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "Tarraa ei siirretty puhelimestasi, kun laite yhdistettiin. Yhdistämishetkellä yli 45 päivää vanhempia medioita ja tiedostoja ei voida synkronoida."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "Puheviestiä ei siirretty puhelimestasi, kun laite yhdistettiin. Yhdistämishetkellä yli 45 päivää vanhempia medioita ja tiedostoja ei voida synkronoida."
   },
   "icu:save": {
     "messageformat": "Tallenna"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "Laitteen nimi"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "Jos haluat muuttaa laitteen nimeä, avaa Signal puhelimessasi ja siirry kohtaan Asetukset > Yhdistetyt laitteet"
   },
   "icu:chooseDeviceName": {
     "messageformat": "Valitse nimi tälle laitteelle"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "Viestien siirtoa viimeistellään..."
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "Perutaan..."
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "Valmistellaan latausta..."
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "Viestit ja keskustelujen tiedot on suojattu päästä päähän -salauksella, myös synkronoinnin aikana. <learnMoreLink>Lue lisää</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "Perutaanko siirto?"
+    "messageformat": "Perutaanko laitteen yhdistäminen?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "Viestejä ja mediaa ei ole vielä kokonaan palautettu. Jos peruutat nyt, laite yhdistetään ilman viestihistoriaa."
+    "messageformat": "Jos perut nyt, laitetta ei yhdistetä eikä viestejä tai mediaa siirretä."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "Jatka siirtoa"
+    "messageformat": "Jatka yhdistämistä"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "Peruuta siirto"
+    "messageformat": "Peru yhdistäminen"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "Virhe viestien siirtämisessä"
@@ -4254,7 +4299,7 @@
     "messageformat": "Palauta kaikkien keskustelujen värit"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "Palauta oletusvärit"
+    "messageformat": "Palauta vakiovärit"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "Palauta alkuasetuksiin"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "Nyt voit halutessasi tuoda keskusteluhistoriasi ja viimeisten 45 päivän mediasisällön mukanasi uuteen yhdistettyyn laitteeseen. Siirtoprosessi on salattu päästä päähän ja täysin valinnainen. Voit valita, tuotko historian mukanasi uuteen laitteeseen siirtyessä."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "Päivitimme Desktop-sovelluksen painiketekstin vastaavaksi kuin Androidissa ja iOS:ssa."
   }
 }

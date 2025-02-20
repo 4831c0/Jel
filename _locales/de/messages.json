@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "Dieser Medieninhalt ist nicht verfügbar"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "Medieninhalt nicht verfügbar"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "Mehr erfahren"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "Diese Datei ist nicht verfügbar"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "Datei nicht verfügbar"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "Diese Sprachnachricht ist nicht verfügbar"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "Diese Nachricht ist unvollständig"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "Sticker nicht verfügbar"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "Sprachnachricht nicht verfügbar"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "Datei nicht verfügbar"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "Vollständige Nachricht nicht verfügbar"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "Medieninhalt nicht verfügbar"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "Sticker nicht verfügbar"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "Sprachnachricht nicht verfügbar"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "Diese Datei wurde nicht von deinem Telefon übertragen, als dieses Gerät gekoppelt wurde. Medien und Dateien, die zum Zeitpunkt der Gerätekoppelung älter als 45 Tage sind, können nicht synchronisiert werden."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "Es wurde nicht die vollständige Nachricht von deinem Telefon übertragen, als dieses Gerät gekoppelt wurde. Lange Textnachrichten, die zum Zeitpunkt der Gerätekoppelung älter als 45 Tage sind, können nicht synchronisiert werden."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "Dieser Medieninhalt wurde nicht von deinem Telefon übertragen, als dieses Gerät gekoppelt wurde. Medien, die zum Zeitpunkt der Gerätekoppelung älter als 45 Tage sind, können nicht synchronisiert werden."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "Dieser Sticker wurde nicht von deinem Telefon übertragen, als dieses Gerät gekoppelt wurde. Medien und Dateien, die zum Zeitpunkt der Gerätekoppelung älter als 45 Tage sind, können nicht synchronisiert werden."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "Diese Sprachnachricht wurde nicht von deinem Telefon übertragen, als dieses Gerät gekoppelt wurde. Medien und Dateien, die zum Zeitpunkt der Gerätekoppelung älter als 45 Tage sind, können nicht synchronisiert werden."
   },
   "icu:save": {
     "messageformat": "Speichern"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "Gerätename"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "Um den Namen dieses Geräts zu ändern, öffne Signal auf deinem Telefon und navigiere zu Einstellungen > Gekoppelte Geräte"
   },
   "icu:chooseDeviceName": {
     "messageformat": "Wähle einen Namen für dieses Gerät aus"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "Nachrichtenübertragung wird abgeschlossen …"
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "Abbrechen …"
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "Herunterladen wird vorbereitet..."
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "Nachrichten und Chat-Infos sowie der Synchronisierungsvorgang sind durch eine Ende-zu-Ende-Verschlüsselung geschützt. <learnMoreLink>Mehr erfahren</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "Übertragung abbrechen?"
+    "messageformat": "Gerätekopplung abbrechen?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "Die Wiederherstellung deiner Nachrichten und Medien ist noch nicht abgeschlossen. Wenn du den Vorgang abbrichst, wird dein Gerät ohne deinen Nachrichtenverlauf gekoppelt."
+    "messageformat": "Wenn du den Vorgang abbrichst, wird das Gerät nicht gekoppelt und deine Nachrichten und Medien werden nicht übertragen."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "Übertragung fortsetzen"
+    "messageformat": "Kopplung fortsetzen"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "Übertragung abbrechen"
+    "messageformat": "Kopplung abbrechen"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "Beim Übertragen deiner Nachrichten ist ein Fehler aufgetreten."
@@ -4254,7 +4299,7 @@
     "messageformat": "Alle Chat-Farben zurücksetzen"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "Standard zurücksetzen"
+    "messageformat": "Standardfarben zurücksetzen"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "Zurücksetzen"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "Wenn du jetzt dein primäres Signal-Gerät mit einem neuen Rechner koppelst, kannst du deinen gesamten Chat-Verlauf und die Medien der letzten 45 Tage mitnehmen. Der Übertragungsprozess ist Ende-zu Ende-verschlüsselt und natürlich optional. Jetzt kannst du also selbst entscheiden, ob du die Vergangenheit komplett hinter dir lassen willst."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "Wir haben die Textbeschriftung auf einer bestimmten Schaltfläche in der Desktop-App aktualisiert, damit sie auf Android und iOS übereinstimmt. Das klingt nach einer sehr kleinen Veränderung, aber manchmal sind es die kleinen Dinge, die zeigen, wie sehr man sich kümmert."
   }
 }

@@ -971,6 +971,10 @@ export async function startApp(): Promise<void> {
       if (window.isBeforeVersion(lastVersion, 'v7.33.0-beta.1')) {
         await window.storage.remove('masterKeyLastRequestTime');
       }
+
+      if (window.isBeforeVersion(lastVersion, 'v7.43.0-beta.1')) {
+        await window.storage.remove('primarySendsSms');
+      }
     }
 
     setAppLoadingScreenMessage(
@@ -2473,7 +2477,7 @@ export async function startApp(): Promise<void> {
 
     const messageDescriptor = getMessageDescriptor({
       // 'message' event: for 1:1 converations, the conversation is same as sender
-      destination: data.source,
+      destinationE164: data.source,
       destinationServiceId: data.sourceAci,
       envelopeId: data.envelopeId,
       message: data.message,
@@ -2733,12 +2737,10 @@ export async function startApp(): Promise<void> {
 
     for (const {
       destinationServiceId,
-      destination,
       isAllowedToReplyToStory,
     } of unidentifiedStatus) {
-      const conversation = window.ConversationController.get(
-        destinationServiceId || destination
-      );
+      const conversation =
+        window.ConversationController.get(destinationServiceId);
       if (!conversation || conversation.id === ourId) {
         continue;
       }
@@ -2785,7 +2787,7 @@ export async function startApp(): Promise<void> {
     if (unidentifiedStatus.length) {
       unidentifiedDeliveries = unidentifiedStatus
         .filter(item => Boolean(item.unidentified))
-        .map(item => item.destinationServiceId || item.destination)
+        .map(item => item.destinationServiceId)
         .filter(isNotNil);
     }
 
@@ -2820,14 +2822,14 @@ export async function startApp(): Promise<void> {
 
   // Works with 'sent' and 'message' data sent from MessageReceiver
   const getMessageDescriptor = ({
-    destination,
+    destinationE164,
     destinationServiceId,
     envelopeId,
     message,
     source,
     sourceDevice,
   }: {
-    destination?: string;
+    destinationE164?: string;
     destinationServiceId?: ServiceIdString;
     envelopeId: string;
     message: ProcessedDataMessage;
@@ -2874,7 +2876,7 @@ export async function startApp(): Promise<void> {
       };
     }
 
-    const id = destinationServiceId || destination;
+    const id = destinationServiceId || destinationE164;
     strictAssert(
       id,
       `${logId}: We need some sort of destination for the conversation`
@@ -2907,7 +2909,7 @@ export async function startApp(): Promise<void> {
     ) {
       const { mergePromises } =
         window.ConversationController.maybeMergeContacts({
-          e164: data.destination,
+          e164: data.destinationE164,
           aci: isAciString(data.destinationServiceId)
             ? data.destinationServiceId
             : undefined,
@@ -3238,14 +3240,13 @@ export async function startApp(): Promise<void> {
   }
 
   function onViewOnceOpenSync(ev: ViewOnceOpenSyncEvent): void {
-    const { source, sourceAci, timestamp } = ev;
-    log.info(`view once open sync ${source} ${timestamp}`);
+    const { sourceAci, timestamp } = ev;
+    log.info(`view once open sync ${sourceAci} ${timestamp}`);
     strictAssert(sourceAci, 'ViewOnceOpen without sourceAci');
     strictAssert(timestamp, 'ViewOnceOpen without timestamp');
 
     const attributes: ViewOnceOpenSyncAttributesType = {
       removeFromMessageReceiverCache: ev.confirm,
-      source,
       sourceAci,
       timestamp,
     };
@@ -3376,10 +3377,9 @@ export async function startApp(): Promise<void> {
   }
 
   function onMessageRequestResponse(ev: MessageRequestResponseEvent): void {
-    const { threadE164, threadAci, groupV2Id, messageRequestResponseType } = ev;
+    const { threadAci, groupV2Id, messageRequestResponseType } = ev;
 
     log.info('onMessageRequestResponse', {
-      threadE164,
       threadAci,
       groupV2Id: `groupv2(${groupV2Id})`,
       messageRequestResponseType,
@@ -3395,7 +3395,6 @@ export async function startApp(): Promise<void> {
     const attributes: MessageRequestAttributesType = {
       envelopeId: ev.envelopeId,
       removeFromMessageReceiverCache: ev.confirm,
-      threadE164,
       threadAci,
       groupV2Id,
       type: messageRequestResponseType,

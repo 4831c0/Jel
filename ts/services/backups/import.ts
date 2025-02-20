@@ -97,7 +97,7 @@ import {
   convertBackupMessageAttachmentToAttachment,
   convertFilePointerToAttachment,
 } from './util/filePointers';
-import { filterAndClean } from '../../types/BodyRange';
+import { filterAndClean, trimMessageWhitespace } from '../../types/BodyRange';
 import { APPLICATION_OCTET_STREAM, stringToMIMEType } from '../../types/MIME';
 import { groupAvatarJobQueue } from '../../jobs/groupAvatarJobQueue';
 import { AttachmentDownloadManager } from '../../jobs/AttachmentDownloadManager';
@@ -503,9 +503,19 @@ export class BackupImportStream extends Writable {
         await this.#fromStickerPack(frame.stickerPack);
       } else if (frame.adHocCall) {
         await this.#fromAdHocCall(frame.adHocCall);
+      } else if (frame.notificationProfile) {
+        log.warn(
+          `${this.#logId}: Received currently unsupported feature: notification profile. Dropping.`
+        );
+      } else if (frame.chatFolder) {
+        log.warn(
+          `${this.#logId}: Received currently unsupported feature: chat folder. Dropping.`
+        );
       } else {
-        log.warn(`${this.#logId}: unsupported frame item ${frame.item}`);
-        throw new Error('Unsupported frame type');
+        log.warn(
+          `${this.#logId}: unknown unsupported frame item ${frame.item}`
+        );
+        throw new Error('Unknown unsupported frame type');
       }
     } catch (error) {
       this.#frameErrorCount += 1;
@@ -1798,8 +1808,17 @@ export class BackupImportStream extends Writable {
     data: Backups.IStandardMessage;
   }): Promise<Partial<MessageAttributesType>> {
     return {
-      body: data.text?.body || undefined,
-      bodyRanges: this.#fromBodyRanges(data.text),
+      // We don't want to trim if we'll be downloading a body attachment; we might
+      // drop bodyRanges which apply to the longer text we'll get in that download.
+      ...(data.longText
+        ? {
+            body: data.text?.body || undefined,
+            bodyRanges: this.#fromBodyRanges(data.text),
+          }
+        : trimMessageWhitespace({
+            body: data.text?.body || undefined,
+            bodyRanges: this.#fromBodyRanges(data.text),
+          })),
       bodyAttachment: data.longText
         ? convertFilePointerToAttachment(data.longText)
         : undefined,

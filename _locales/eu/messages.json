@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "Multimedia-edukia ez dago erabilgarri"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "Multimedia-edukia ez dago eskuragarri"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "Informazio gehiago"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "Fitxategi hau ez dago erabilgarri"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "Fitxategia ez dago eskuragarri"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "Ahots-mezu hau ez dago erabilgarri"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "Mezu hau ez dago osorik"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "Eranskailua ez dago eskuragarri"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "Ahots-mezua ez dago eskuragarri"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "Fitxategia ez dago eskuragarri"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "Mezu osoa ez dago eskuragarri"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "Multimedia-edukia ez dago eskuragarri"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "Eranskailua ez dago eskuragarri"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "Ahots-mezua ez dago eskuragarri"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "Gailu hau lotzean, fitxategi hau ez da transferitu telefonotik. Gailua lotzean 45 egun baino gehiago dituzten multimedia-eduki eta fitxategiak ezin dira sinkronizatu."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "Gailu hau lotzean, mezu honen testu osoa ez da transferitu telefonotik. Gailua lotzean 45 egun baino gehiago dituzten testu-mezu luzeak ezin dira sinkronizatu."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "Gailu hau lotzean, multimedia-eduki hau ez da transferitu telefonotik. Gailua lotzean 45 egun baino gehiago dituzten multimedia-edukiak ezin dira sinkronizatu."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "Gailu hau lotzean, eranskailu hau ez da transferitu telefonotik. Gailua lotzean 45 egun baino gehiago dituzten multimedia-eduki eta fitxategiak ezin dira sinkronizatu."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "Gailu hau lotzean, ahots-mezu hau ez da transferitu telefonotik. Gailua lotzean 45 egun baino gehiago dituzten multimedia-eduki eta fitxategiak ezin dira sinkronizatu."
   },
   "icu:save": {
     "messageformat": "Gorde"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "Gailuaren izena"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "Gailu honen izena aldatzeko, ireki Signal telefonoan eta joan Ezarpenak > Lotutako gailuak atalera"
   },
   "icu:chooseDeviceName": {
     "messageformat": "Aukeratu gailu honen izena"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "Mezuen transferentzia amaitzen..."
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "Bertan behera uzten…"
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "Deskargatzeko prestatzen…"
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "Mezuak eta txatari buruzko informazioa muturretik muturrerako enkriptatzearen bidez daude babestuta (sinkronizazio-prozesua barne). <learnMoreLink>Informazio gehiago</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "Transferentzia bertan behera utzi nahi duzu?"
+    "messageformat": "Gailua lotzeko prozesua bertan behera utzi nahi duzu?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "Oraindik ez dira leheneratu mezuak eta multimedia-edukiak. Bertan behera uztea aukeratzen baduzu, mezu-historia gabe lotuko da gailua."
+    "messageformat": "Bertan behera uztea aukeratzen baduzu, gailu hau ez da lotuko, eta ez da transferituko multimedia-eduki edo mezurik."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "Jarraitu transferitzen"
+    "messageformat": "Jarraitu lotzen"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "Utzi transferentzia bertan behera"
+    "messageformat": "Ez lotu"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "Errore bat gertatu da mezuak transferitzean"
@@ -4254,7 +4299,7 @@
     "messageformat": "Berrezarri txat-kolore guztiak"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "Berrezarri lehenetsia"
+    "messageformat": "Berrezarri kolore lehenetsiak"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "Berrabiarazi"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "Orain, txat-historia eta azken 45 egunetako multimedia-edukia lotutako gailu berri batera transferitzea aukera dezakezu. Transferentzia-prozesua muturretik muturrera enkriptatuta dago, eta guztiz hautazkoa da."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "Ordenagailurako aplikazioko botoi baten testua eguneratu dugu, Android eta iOS-ekin bat etor zedin."
   }
 }

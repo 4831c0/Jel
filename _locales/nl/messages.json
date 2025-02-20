@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "Dit mediabestand is niet beschikbaar"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "Media niet beschikbaar"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "Meer informatie"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "Dit bestand is niet beschikbaar"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "Bestand niet beschikbaar"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "Dit spraakbericht is niet beschikbaar"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "Dit bericht is onvolledig"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "Sticker niet beschikbaar"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "Spraakbericht niet beschikbaar"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "Bestand niet beschikbaar"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "Volledig bericht niet beschikbaar"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "Media niet beschikbaar"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "Sticker niet beschikbaar"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "Spraakbericht niet beschikbaar"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "Dit bestand is niet overgezet van je telefoon toen dit apparaat werd gekoppeld. Media en bestanden die ouder zijn dan 45 dagen op het moment dat het apparaat wordt gekoppeld, kunnen niet worden gesynchroniseerd."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "Van dit bericht is niet de volledige tekst overgezet van je telefoon toen dit apparaat werd gekoppeld. Lange tekstberichten die ouder zijn dan 45 dagen op het moment dat een apparaat wordt gekoppeld, kunnen niet worden gesynchroniseerd."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "Dit bestand is niet overgezet van je telefoon toen dit apparaat werd gekoppeld. Bestanden ouder dan 45 dagen op het moment dat het apparaat wordt gekoppeld, kunnen niet worden gesynchroniseerd."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "Deze sticker is niet overgezet van je telefoon toen dit apparaat werd gekoppeld. Media en bestanden die ouder zijn dan 45 dagen op het moment dat het apparaat wordt gekoppeld, kunnen niet worden gesynchroniseerd."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "Dit spraakbericht is niet overgezet van je telefoon toen dit apparaat werd gekoppeld. Media en bestanden die ouder zijn dan 45 dagen op het moment dat het apparaat wordt gekoppeld, kunnen niet worden gesynchroniseerd."
   },
   "icu:save": {
     "messageformat": "Opslaan"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "Apparaatnaam"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "Om de naam van dit apparaat te wijzigen, open de Signal-app op je mobiele telefoon en navigeer naar Instellingen > Gekoppelde apparaten"
   },
   "icu:chooseDeviceName": {
     "messageformat": "Kies een naam voor dit apparaat"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "Berichtoverdracht aan het afronden..."
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "Annuleren..."
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "Download voorbereiden..."
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "Berichten en chatgegevens worden beschermd door end-to-end-versleuteling, ook tijdens het synchronisatieproces. <learnMoreLink>Meer informatie</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "Overzetten annuleren?"
+    "messageformat": "Koppelen van apparaat annuleren?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "Het herstellen van je berichten en media is nog niet voltooid. Als je ervoor kiest om te annuleren, wordt je apparaat gekoppeld zonder je chatgeschiedenis."
+    "messageformat": "Als je ervoor kiest om te annuleren, wordt je apparaat niet gekoppeld en worden berichten en media niet overgezet."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "Doorgaan met overzetten"
+    "messageformat": "Doorgaan met koppelen"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "Overzetten annuleren"
+    "messageformat": "Koppelen annuleren"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "Fout bij het overzetten van je berichten"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "Je kunt er nu voor kiezen om je volledige chatgeschiedenis en je laatste 45 dagen aan media over te zetten naar een nieuw gekoppelde desktop. Het overzetten is end-to-end versleuteld en volledig optioneel. Aan jou de keus of je je verleden achter je laat of gewoon met je mee blijft dragen."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "We hebben de tekst op een knop in de desktop-app aangepast zodat deze hetzelfde is als in Android en iOS."
   }
 }

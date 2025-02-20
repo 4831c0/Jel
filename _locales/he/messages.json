@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "מדיה זו אינה זמינה"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "מדיה לא זמינה"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "למידע נוסף"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "קובץ זה אינו זמין"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "קובץ לא זמין"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "הודעה קולית זו אינה זמינה"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "הודעה זו אינה שלמה"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "סטיקר לא זמין"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "הודעה קולית לא זמינה"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "קובץ לא זמין"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "הודעה מלאה לא זמינה"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "מדיה לא זמינה"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "סטיקר לא זמין"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "הודעה קולית לא זמינה"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "הקובץ הזה לא הועבר מהטלפון שלך כשהמכשיר הזה קושר. לא ניתן לסנכרן קבצים ומדיה שיותר ישנים מ–45 ימים בזמן קישור המכשיר."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "הטקסט המלא בהודעה זו לא הועבר מהטלפון שלך כשהמכשיר הזה קושר. לא ניתן לסנכרן הודעות טקסט ארוכות שיותר ישנות מ–45 ימים בזמן קישור המכשיר."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "המדיה הזו לא הועברה מהטלפון שלך כשהמכשיר הזה קושר. לא ניתן לסנכרן מדיה ישנה יותר מ–45 ימים בזמן קישור המכשיר."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "הסטיקר הזה לא הועבר מהטלפון שלך כשהמכשיר הזה קושר. לא ניתן לסנכרן קבצים ומדיה שיותר ישנים מ–45 ימים בזמן קישור המכשיר."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "ההודעה הקולית הזו לא הועברה מהטלפון שלך כשהמכשיר הזה קושר. לא ניתן לסנכרן קבצים ומדיה שיותר ישנים מ–45 ימים בזמן קישור המכשיר."
   },
   "icu:save": {
     "messageformat": "שמור"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "שם מכשיר"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "כדי לשנות את שם המכשיר הזה, יש לפתוח את Signal בטלפון ולנווט אל הגדרות > מכשירים מקושרים"
   },
   "icu:chooseDeviceName": {
     "messageformat": "בחר שם של מכשיר זה"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "משלימים את העברת ההודעות…"
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "מתבצע ביטול…"
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "מתכוננים להורדה…"
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "הודעות ופרטי צ׳אט מוגנים באמצעות הצפנה מקצה לקצה, כולל תהליך הסנכרון. <learnMoreLink>למידע נוסף</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "לבטל העברה?"
+    "messageformat": "לבטל את הקישור למכשיר?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "שחזור ההודעות והמדיה שלך לא הושלם. אם תבחר/י לבטל, המכשיר שלך יקושר ללא היסטוריית ההודעות שלך."
+    "messageformat": "אם תבחר/י לבטל, המכשיר הזה לא יקושר ולא יועברו הודעות או מדיה."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "המשך העברה"
+    "messageformat": "המשך קישור"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "ביטול העברה"
+    "messageformat": "ביטול קישור"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "שגיאה בהעברת ההודעות שלך"
@@ -4254,7 +4299,7 @@
     "messageformat": "איפוס כל צבעי הצ'אט"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "אפס ברירת מחדל"
+    "messageformat": "איפוס צבעי ברירת מחדל"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "אפס"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "עכשיו אפשר לקשר את מכשיר Signal העיקרי שלך לשולחן עבודה חדש ולהעביר איתך גם את היסטוריית הצ׳אט ואת 45 ימי המדיה האחרונים שלך."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "עדכנו את הטקסט בכפתור של אפליקציית שולחן העבודה כדי שהוא יהיה תואם ל–Android ו–iOS."
   }
 }

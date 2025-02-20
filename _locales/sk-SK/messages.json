@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "Toto médium nie je k dispozícii"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "Médium nie je k dispozícii"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "Zistiť viac"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "Tento súbor nie je k dispozícii"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "Súbor nie je k dispozícii"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "Táto hlasová správa nie je k dispozícii"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "Táto správa je neúplná"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "Nálepka nie je k dispozícii"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "Hlasová správa nie je k dispozícii"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "Súbor nie je k dispozícii"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "Celá správa nie je k dispozícii"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "Médium nie je k dispozícii"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "Nálepka nie je k dispozícii"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "Hlasová správa nie je k dispozícii"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "Tento súbor nebol po prepojení zariadenia prenesený z vášho telefónu. Médiá a súbory, ktoré sú v čase prepojenia zariadenia staršie ako 45 dní, nie je možné synchronizovať."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "Po prepojení zariadenia nebol z vášho telefónu prenesený celý text tejto správy. Dlhé textové správy, ktoré sú v čase prepojenia zariadenia staršie ako 45 dní, nie je možné synchronizovať."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "Toto médium nebolo po prepojení zariadenia prenesené z vášho telefónu. Médiá, ktoré sú v čase prepojenia zariadenia staršie ako 45 dní, nie je možné synchronizovať."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "Táto nálepka nebola po prepojení zariadenia prenesená z vášho telefónu. Médiá a súbory, ktoré sú v čase prepojenia zariadenia staršie ako 45 dní, nie je možné synchronizovať."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "Táto hlasová správa nebola po prepojení zariadenia prenesená z vášho telefónu. Médiá a súbory, ktoré sú v čase prepojenia zariadenia staršie ako 45 dní, nie je možné synchronizovať."
   },
   "icu:save": {
     "messageformat": "Uložiť"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "Názov zariadenia"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "Ak chcete zmeniť názov tohto zariadenia, otvorte v telefóne Signal a prejdite do časti Nastavenia > Prepojené zariadenia"
   },
   "icu:chooseDeviceName": {
     "messageformat": "Zvoľte názov pre toto zariadenie"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "Dokončuje sa prenos správ…"
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "Prebieha zrušenie…"
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "Pripravuje sa sťahovanie…"
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "Správy a informácie o četoch sú chránené end-to-end šifrovaním vrátane procesu synchronizácie. <learnMoreLink>Zistiť viac</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "Zrušiť prenos?"
+    "messageformat": "Zrušiť prepojenie zariadenia?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "Obnovenie vašich správ a médií sa nedokončilo. Ak sa rozhodnete prenos zrušiť, vaše zariadenie bude prepojené bez histórie správ."
+    "messageformat": "Ak sa rozhodnete prepojenie zrušiť, toto zariadenie nebude prepojené a neprenesú sa žiadne správy ani médiá."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "Pokračovať v prenose"
+    "messageformat": "Pokračovať v prepájaní"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "Zrušiť prenos"
+    "messageformat": "Zrušiť prepojenie"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "Vyskytla sa chyba pri prenose vašich správ"
@@ -4254,7 +4299,7 @@
     "messageformat": "Obnoviť všetky farby četu"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "Obnoviť predvolené"
+    "messageformat": "Obnoviť predvolené farby"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "Resetovať"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "Teraz si po prepojení svojho primárneho zariadenia Signal s novým počítačom môžete preniesť históriu četov a médiá z posledných 45 dní. Prenos je voliteľný a jeho proces chránený end-to-end šifrovaním."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "Aktualizovali sme text na tlačidle v aplikácii Desktop, aby zodpovedal systémom Android a iOS."
   }
 }

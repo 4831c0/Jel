@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "Toto médium není dostupné"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "Média nejsou k dispozici"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "Zjistit více"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "Tento soubor není dostupný"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "Soubor není k dispozici"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "Tato hlasová zpráva není dostupná"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "Tato zpráva je neúplná"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "Nálepka není k dispozici"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "Hlasová zpráva není k dispozici"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "Soubor není k dispozici"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "Celá zpráva není k dispozici"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "Média nejsou k dispozici"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "Nálepka není k dispozici"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "Hlasová zpráva není k dispozici"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "Tento soubor nebyl při propojení tohoto zařízení z vašeho telefonu přenesen. Média a soubory, které jsou v době propojení zařízení starší než 45 dní, nelze synchronizovat."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "Celý text této zprávy nebyl při propojení tohoto zařízení z vašeho telefonu přenesen. Dlouhé textové zprávy, které jsou v době propojení zařízení starší než 45 dní, nelze synchronizovat."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "Toto médium nebylo při propojení tohoto zařízení z vašeho telefonu přeneseno. Média, která jsou v době propojení zařízení starší než 45 dní, nelze synchronizovat."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "Tato nálepka nebyla při propojení tohoto zařízení z vašeho telefonu přenesena. Média a soubory, které jsou v době propojení zařízení starší než 45 dní, nelze synchronizovat."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "Tato hlasová zpráva nebyla při propojení tohoto zařízení z vašeho telefonu přenesena. Média a soubory, které jsou v době propojení zařízení starší než 45 dní, nelze synchronizovat."
   },
   "icu:save": {
     "messageformat": "Uložit"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "Název zařízení"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "Pokud chcete změnit název tohoto zařízení, otevřete v telefonu aplikaci Signal a přejděte do nabídky Nastavení > Propojená zařízení"
   },
   "icu:chooseDeviceName": {
     "messageformat": "Zvolte název tohoto zařízení"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "Dokončuje se přenos zpráv…"
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "Rušení propojení…"
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "Příprava ke stažení…"
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "Zprávy a informace o chatech jsou chráněny koncovým šifrováním, včetně procesu synchronizace. <learnMoreLink>Zjistit více</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "Zrušit přenos?"
+    "messageformat": "Zrušit propojení zařízení?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "Obnovení vašich zpráv a médií nebylo dokončeno. Pokud jste se jej rozhodli zrušit, bude vaše zařízení propojeno bez historie zpráv."
+    "messageformat": "Pokud se ho rozhodnete zrušit, nebude toto zařízení propojeno a nebudou se přenášet žádné zprávy ani média."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "Pokračovat v přenosu"
+    "messageformat": "Pokračovat v propojení"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "Zrušit přenos"
+    "messageformat": "Zrušit propojení"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "Chyba při přenosu zpráv"
@@ -4254,7 +4299,7 @@
     "messageformat": "Obnovit všechny barvy chatu"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "Obnovit výchozí nastavení"
+    "messageformat": "Resetovat výchozí barvy"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "Obnovit"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "Nyní se můžete rozhodnout, zda chcete přenést historii chatů a médií za posledních 45 dní do nového stolního počítače. Přenos je koncově šifrovaný a zcela volitelný."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "Aktualizovali jsme text na tlačítku v desktopové verzi tak, aby se shodoval se systémy Android a iOS."
   }
 }

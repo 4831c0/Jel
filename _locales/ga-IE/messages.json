@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "Níl an meán sin ar fáil"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "Níl an meán ar fáil"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "Tuilleadh faisnéise"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "Níl an comhad sin ar fáil"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "Níl an comhad ar fáil"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "Ní an glórphost sin ar fáil"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "Tá an teachtaireacht seo neamhiomlán"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "Níl an greamán ar fáil"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "Níl an glórphost ar fáil"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "Níl an comhad ar fáil"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "Níl an teachtaireacht iomlán ar fáil"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "Níl an meán ar fáil"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "Níl an greamán ar fáil"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "Níl an glórphost ar fáil"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "Níor aistríodh an comhad seo ó do ghuthán nuair a nascadh an gléas seo. Meáin agus comhaid a bhí níos sine ná 45 lá ag an uair a nascadh an gléas, ní féidir iad a shioncronú."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "Níor aistríodh an téacs iomlán sa teachtaireacht seo ó do ghuthán nuair a nascadh do ghléas. Teachtaireachtaí téacs fada a bhí níos sine ná 45 lá ag an uair a nascadh an gléas, ní féidir iad a shioncronú."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "Níor aistríodh an meán seo ó do ghuthán nuair a nascadh an gléas seo. Meáin a bhí níos sine ná 45 lá ag an uair a nascadh an gléas, ní féidir iad a shioncronú."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "Níor aistríodh an greamán seo ó do ghuthán nuair a nascadh an gléas seo. Meáin agus comhaid a bhí níos sine ná 45 lá ag an uair a nascadh an gléas, ní féidir iad a shioncronú."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "Níor aistríodh an glórphost seo ó do ghuthán nuair a nascadh an gléas seo. Meáin agus comhaid a bhí níos sine ná 45 lá ag an uair a nascadh an gléas, ní féidir iad a shioncronú."
   },
   "icu:save": {
     "messageformat": "Cuir i dtaisce é"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "Ainm an ghléis"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "Chun ainm an ghléis seo a athrú, oscail Signal ar do ghuthán agus téigh chuig Socruithe > Gléasanna nasctha"
   },
   "icu:chooseDeviceName": {
     "messageformat": "Roghnaigh ainm an ghléis seo"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "Aistriú na dteachtaireachtaí á chur i gcrích..."
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "Á chur ar ceal..."
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "Íoslódáil á hullmhú..."
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "Déantar teachtaireachtaí agus faisnéis comhráite a chosaint le criptiú ó cheann ceann, an próiseas sioncronaithe san áireamh. <learnMoreLink>Tuilleadh faisnéise</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "Cuir an t-aistriú ar ceal?"
+    "messageformat": "Cuir nascadh an ghléis ar ceal?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "Ní dhearnadh aischur do chuid teachtaireachtaí agus meán a chur i gcrích go hiomlán. Má roghnaíonn tú é a chur ar ceal, nascfar do ghléas gan stair do theachtaireachtaí."
+    "messageformat": "Má roghnaíonn tú é a chur ar ceal, ní nascfar an gléas seo agus ní aistreofar teachtaireachtaí ná meáin."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "Lean leis an aistriú"
+    "messageformat": "Lean le nascadh"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "Cuir an t-aistriú ar ceal"
+    "messageformat": "Cuir nascadh ar ceal"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "Tharla earráid agus do theachtaireachtaí á n-aistriú"
@@ -4254,7 +4299,7 @@
     "messageformat": "Athshocraigh dath gach comhrá"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "Athshocraigh réamhshocrú"
+    "messageformat": "Athshocraigh dathanna réamhshocraithe"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "Athshocraigh"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "Anois nuair a nascann tú do phríomhghléas Signal le Deasc nua, is féidir leat do stair comhráite agus na 45 lá deiridh de do mheáin a thabhairt leat. Tá an próiseas aistrithe criptithe ó cheann ceann, agus go hiomlán roghnach. Is leatsa an rogha cibé acu an ndéanfaidh tú na seansonraí a fhágáil i do dhiaidh nó a thabhairt leat."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "Rinneamar an téacs ar chnaipe san aip Desktop a nuashonrú le bheith cosúil le Android agus iOS."
   }
 }

@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "یہ میڈیا دستیاب نہیں"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "میڈیا دستیاب نہیں ہے"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "مزید جانیں"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "یہ فائل دستیاب نہیں"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "فائل دستیاب نہیں ہے"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "یہ صوتی میسج دستیاب نہیں"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "یہ میسج نامکمل ہے"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "اسٹیکر دستیاب نہیں ہے"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "صوتی میسج دستیاب نہیں ہے"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "فائل دستیاب نہیں ہے"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "مکمل میسج دستیاب نہیں ہے"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "میڈیا دستیاب نہیں ہے"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "اسٹیکر دستیاب نہیں ہے"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "صوتی میسج دستیاب نہیں ہے"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "جب اس ڈیوائس کو لنک کیا گیا تھا تو یہ فائل آپ کے فون سے ٹرانسفر نہیں ہوئی تھی۔ ڈیوائس لنک کرتے وقت 45 دنوں سے زیادہ پرانے میڈیا اور فائلز کو سنک نہیں کیا جا سکتا۔"
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "جب اس ڈیوائس کو لنک کیا گیا تھا تو اس وقت اس میسج کا مکمل ٹیکسٹ آپ کے فون سے ٹرانسفر نہیں ہوا تھا۔ ڈیوائس لنک کرنے کے وقت 45 دن سے پرانے طویل ٹیکسٹ میسجز سنک نہیں ہو سکتے۔"
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "جب اس ڈیوائس کو لنک کیا گیا تھا تو یہ میڈیا آپ کے فون سے ٹرانسفر نہیں ہوا تھا۔ ڈیوائس لنک کرتے وقت 45 دنوں سے زیادہ پرانا میڈیا کو سنک نہیں کیا جا سکتا۔"
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "جب اس ڈیوائس کو لنک کیا گیا تھا تو یہ اسٹیکر آپ کے فون سے ٹرانسفر نہیں ہوا تھا۔ ڈیوائس لنک کرتے وقت 45 دنوں سے زیادہ پرانے میڈیا اور فائلز کو سنک نہیں کیا جا سکتا۔"
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "جب اس ڈیوائس کو لنک کیا گیا تھا تو یہ صوتی میسج آپ کے فون سے ٹرانسفر نہیں ہوا تھا۔s ڈیوائس لنک کرتے وقت 45 دنوں سے زیادہ پرانے میڈیا اور فائلز کو سنک نہیں کیا جا سکتا۔"
   },
   "icu:save": {
     "messageformat": "محفوظ کریں"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "ڈیوائس کا نام"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "اس ڈیوائس کا نام تبدیل کرنے کے لیے، اپنے فون پر Signal کھولیں اور سیٹنگز > لنک کردہ ڈیوائسز پر جائیں"
   },
   "icu:chooseDeviceName": {
     "messageformat": "ڈیوائس کا نام منتخب کریں"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "میسج منتقل کرنے کا عمل حتمی مرحلے میں ہے..."
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "منسوخ ہو رہا ہے..."
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "ڈاؤن لوڈ کرنے کے لیے تیار کیا جا رہا ہے..."
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "میسجز اور چیٹس کی معلومات اینڈ ٹو اینڈ انکرپشن کے ذریعے محفوظ شدہ ہیں، بشمول سنک کا عمل۔ <learnMoreLink>مزید جانیں</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "منتقل کرنے کو منسوخ کریں؟"
+    "messageformat": "ڈیوائس لنک کرنے کو منسوخ کریں؟"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "آپ کے میسجز اور میڈیا کی بحالی مکمل نہیں ہوئی۔ اگر آپ منسوخ کرنے کو منتخب کرتے ہیں، تو آپ کی ڈیوائس کو میسج ہسٹری کے بغیر منسلک کر دیا جائے گا۔"
+    "messageformat": "اگر آپ منسوخ کرنے کا انتخاب کرتے ہیں، تو اس ڈیوائس کو لنک نہیں کیا جائے گا اور کوئی میسجز یا میڈیا کو ٹرانسفر نہیں کیا جائے گا۔"
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "منتقل کرنا جاری رکھیں"
+    "messageformat": "لنک کرنا جاری رکھیں"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "منتقل کرنے کو منسوخ کریں"
+    "messageformat": "لنک کرنا منسوخ کریں"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "آپ کے میسجز ٹرانسفر کرنے میں نقص"
@@ -4254,7 +4299,7 @@
     "messageformat": "تمام چیٹ کے رنگ دوبارہ سیٹ کریں"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "ڈیفالٹ کو دوبارہ ترتیب دیں"
+    "messageformat": "پہلے سے طے شدہ رنگوں کو دوبارہ ترتیب دیں"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "دوبارہ بحال کریں"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "اب جب آپ اپنی بنیادی Signal ڈیوائس کو ایک نئے ڈیسک ٹاپ کے ساتھ لنک کریں گے، تو آپ اپنی چیٹ ہسٹری اور گزشتہ 45 دنوں کا میڈیا اس میں اپنے ساتھ لا سکتے ہیں۔ ٹرانسفر کا عمل اینڈ ٹو اینڈ انکرپٹ کردہ ہے، اور مکمل طور پر اختیاری ہے۔ جب یہ انتخاب کرنے کی بات آتی ہے کہ آیا ماضی کو پیچھے چھوڑنا ہے یا نہیں، تو آپ اپنی ڈیوائسز پر انحصار کرتے ہیں۔"
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "ہم نے Desktop ایپ میں ایک بٹن کے متن کو اپ ڈیٹ کیا ہے تاکہ Android اور iOS کے ساتھ ہم آہنگ ہو سکے۔"
   }
 }

@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "Овај медиј није доступан"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "Медиј није доступан"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "Сазнајте више"
   },
-  "icu:fileNotAvailable": {
+  "icu:attachmentNotAvailable__file": {
     "messageformat": "Овај фајл није доступан"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "Ова гласовна порука није доступна"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "Ова порука је непотпуна"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "Налепница није доступна"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "Гласовна порука није доступна"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "Овај фајл није доступан"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "Није доступна цела порука"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "Медиј није доступан"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "Налепница није доступна"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "Гласовна порука није доступна"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "Овај фајл није пребачен са вашег телефона када је овај уређај повезан. Фајлови и медији који су у тренутку повезивања уређаја старији од 45 дана не могу се синхронизовати."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "Са вашег телефона се није пребацио цео текст ове поруке када је повезан уређај. Дугачке текстуалне поруке које су у тренутку повезивања уређаја старије од 45 дана не могу се синхронизовати."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "Овај медиј није пребачен са вашег телефона када је овај уређај повезан. Фајлови и медији који су у тренутку повезивања уређаја старији од 45 дана не могу се синхронизовати."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "Ова налепница није пребачена са вашег телефона када је овај уређај повезан. Фајлови и медији који су у тренутку повезивања уређаја старији од 45 дана не могу се синхронизовати."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "Ова гласовна порука није пребачена са вашег телефона када је овај уређај повезан. Фајлови и медији који су у тренутку повезивања уређаја старији од 45 дана не могу се синхронизовати."
   },
   "icu:save": {
     "messageformat": "Сачувај"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "Назив уређаја"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "Да бисте променили име уређаја, отворите Signal на телефону и идите на Подешавања > Повезани уређаји"
   },
   "icu:chooseDeviceName": {
     "messageformat": "Изаберите назив за овај уређај"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "Пренос порука се приводи крају…"
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "Отказивање..."
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "Припрема за преузимање…"
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "Поруке и информације о ћаскањима заштићене су потпуним шифровањем, укључујући процес синхронизације. <learnMoreLink>Сазнајте више</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "Желите ли да откажете пренос?"
+    "messageformat": "Желите да откажете повезивање уређаја?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "Није завршено враћање ваших порука и медија. Ако одлучите да откажете, уређај ће вам бити повезан без историје порука."
+    "messageformat": "Ако одлучите да откажете, овај уређај неће бити повезан и никакве поруке нити медији неће бити пребачени."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "Настави пренос"
+    "messageformat": "Настави повезивање"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "Откажи пренос"
+    "messageformat": "Откажи повезивање"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "Грешка приликом преноса порука"
@@ -4254,7 +4299,7 @@
     "messageformat": "Ресетуј све боје ћаскања"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "Врати на подразумевано"
+    "messageformat": "Ресетуј подразумеване боје"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "Ресетуј"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "Сада можете да изаберете да пренесете своју историју ћаскања и последњих 45 дана медија на нови повезани десктоп рачунар."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "Ажурирали смо текст дугмета на апликацији на десктопу, како би се слагао са дугметом на Android-у и iOS-у."
   }
 }

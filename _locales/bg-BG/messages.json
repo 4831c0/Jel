@@ -1145,14 +1145,53 @@
   "icu:mediaNotAvailable": {
     "messageformat": "Тази мултимедия не е налична"
   },
+  "icu:mediaNotAvailable--short": {
+    "messageformat": "Мултимедията не е налична"
+  },
   "icu:attachmentNoLongerAvailable__learnMore": {
     "messageformat": "Научете повече"
   },
-  "icu:fileNotAvailable": {
-    "messageformat": "Този файл не е наличен"
+  "icu:attachmentNotAvailable__file": {
+    "messageformat": "Файлът не е наличен"
   },
-  "icu:voiceMessageNotAvailable": {
-    "messageformat": "Това гласово съобщение не е налично"
+  "icu:attachmentNotAvailable__longMessage": {
+    "messageformat": "Това съобщение е непълно"
+  },
+  "icu:attachmentNotAvailable__sticker": {
+    "messageformat": "Стикерът не е наличен"
+  },
+  "icu:attachmentNotAvailable__voice": {
+    "messageformat": "Гласовото съобщение не е налично"
+  },
+  "icu:AttachmentNotAvailableModal__title--file": {
+    "messageformat": "Файлът не е наличен"
+  },
+  "icu:AttachmentNotAvailableModal__title--long-text": {
+    "messageformat": "Пълното съобщение не е налично"
+  },
+  "icu:AttachmentNotAvailableModal__title--media": {
+    "messageformat": "Мултимедията не е налична"
+  },
+  "icu:AttachmentNotAvailableModal__title--sticker": {
+    "messageformat": "Стикерът не е наличен"
+  },
+  "icu:AttachmentNotAvailableModal__title--voice-message": {
+    "messageformat": "Гласовото съобщение не е налично"
+  },
+  "icu:AttachmentNotAvailableModal__body--file": {
+    "messageformat": "Този файл не е прехвърлен от телефона ви при свързването на това устройство. Мултимедията и файловете, по-стари от 45 дни в момента на свързване на устройството, не могат да бъдат синхронизирани."
+  },
+  "icu:AttachmentNotAvailableModal__body--long-text": {
+    "messageformat": "Пълният текст на това съобщение не е прехвърлен от телефона ви при свързването на това устройство. Дългите текстови съобщения, по-стари от 45 дни в момента на свързване на устройството, не могат да бъдат синхронизирани."
+  },
+  "icu:AttachmentNotAvailableModal__body--media": {
+    "messageformat": "Тази мултимедия не е прехвърлена от телефона ви при свързването на това устройство. Мултимедията, по-стара от 45 дни в момента на свързване на устройството, не може да бъде синхронизирана."
+  },
+  "icu:AttachmentNotAvailableModal__body--sticker": {
+    "messageformat": "Този стикер не е прехвърлен от телефона ви при свързването на това устройство. Мултимедията и файловете, по-стари от 45 дни в момента на свързване на устройството, не могат да бъдат синхронизирани."
+  },
+  "icu:AttachmentNotAvailableModal__body--voice-message": {
+    "messageformat": "Това гласово съобщение не е прехвърлено от телефона ви при свързването на това устройство. Мултимедията и файловете, по-стари от 45 дни в момента на свързване на устройството, не могат да бъдат синхронизирани."
   },
   "icu:save": {
     "messageformat": "Запази"
@@ -1216,6 +1255,9 @@
   },
   "icu:Preferences--device-name": {
     "messageformat": "Име на устройството"
+  },
+  "icu:Preferences--device-name__description": {
+    "messageformat": "За промяна на името на това устройство отворете Signal на телефона си и отидете на „Настройки > Свързани устройства“"
   },
   "icu:chooseDeviceName": {
     "messageformat": "Изберете име за устройството"
@@ -3617,6 +3659,9 @@
   "icu:BackupImportScreen__progressbar-hint--processing": {
     "messageformat": "Финализиране на прехвърлянето на съобщения..."
   },
+  "icu:BackupImportScreen__progressbar-hint--canceling": {
+    "messageformat": "Отменяне…"
+  },
   "icu:BackupImportScreen__progressbar-hint--preparing": {
     "messageformat": "Подготвяне за изтегляне…"
   },
@@ -3630,16 +3675,16 @@
     "messageformat": "Съобщенията и информацията за чатовете са защитени чрез криптиране от край до край, включително процеса за синхронизиране. <learnMoreLink>Научете повече</learnMoreLink>"
   },
   "icu:BackupImportScreen__cancel-confirmation__title": {
-    "messageformat": "Отмяна на трансфера?"
+    "messageformat": "Отмяна на свързването на устройството?"
   },
   "icu:BackupImportScreen__cancel-confirmation__body": {
-    "messageformat": "Възстановяването на съобщенията и мултимедията ви не е приключило. Ако решите да отмените, устройството ви ще бъде свързано без вашата история на съобщенията."
+    "messageformat": "Ако изберете да отмените, това устройство няма да бъде свързано и няма да бъдат прехвърлени съобщения или мултимедия."
   },
   "icu:BackupImportScreen__cancel-confirmation__cancel": {
-    "messageformat": "Продължаване на трансфера"
+    "messageformat": "Продължаване със свързването"
   },
   "icu:BackupImportScreen__cancel-confirmation__confirm": {
-    "messageformat": "Отмяна на трансфера"
+    "messageformat": "Отмяна на свързването"
   },
   "icu:BackupImportScreen__error__title": {
     "messageformat": "Грешка при прехвърлянето на съобщенията ви"
@@ -4254,7 +4299,7 @@
     "messageformat": "Нулиране на всички цветове на чатове"
   },
   "icu:ChatColorPicker__confirm-reset-default": {
-    "messageformat": "Нулиране до настройките по подразбиране"
+    "messageformat": "Връщане на цветовете по подразбиране"
   },
   "icu:ChatColorPicker__confirm-reset": {
     "messageformat": "Рестартирай"
@@ -5820,5 +5865,8 @@
   },
   "icu:WhatsNew__v7.40--1": {
     "messageformat": "Сега можете да изберете да пренесете историята на чата и мултимедийните файлове от последните 45 дни към ново свързано устройство. Процесът на прехвърляне е криптиран от край до край и е абсолютно незадължителен."
+  },
+  "icu:WhatsNew__v7.43--0": {
+    "messageformat": "Обновихме текстовия етикет на бутон в приложението за настолен компютър, за да съвпада със същия бутон в Android и iOS."
   }
 }
