@@ -364,6 +364,11 @@ export function Preferences({
     SignalContext.Jel.prefs.getSelectedTheme()
   );
 
+  if (themeIndex >= themes.length) {
+    setThemeIndex(-1);
+    SignalContext.Jel.prefs.setSelectedTheme(-1);
+  }
+
   const storiesId = useUniqueId();
   const themeSelectId = useUniqueId();
   const zoomSelectId = useUniqueId();
