@@ -425,7 +425,8 @@
     "linux": {
       "category": "Network;InstantMessaging;Chat",
       "target": [
-        "zip"
+        "zip",
+        "rpm"
       ],
       "icon": "build/icons/png",
       "publish": []

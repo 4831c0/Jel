@@ -43,11 +43,16 @@ jobs:
             ./node_modules
           key: ${{ runner.os }}-node_modules
 
-      - name: Upload Linux Release Artifact
+      - name: Upload Linux Zip Release Artifact
         uses: actions/upload-artifact@v4
         with:
-            name: linux-release
+            name: linux-release-zip
             path: release/*.zip
+      - name: Upload Linux Rpm Release Artifact
+        uses: actions/upload-artifact@v4
+        with:
+            name: linux-release-rpm
+            path: release/*.rpm
 
   build-win32:
     name: Build Windows Artifacts
